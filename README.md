@@ -1,0 +1,1 @@
+# hoass home assistant configuration

@@ -25,6 +25,15 @@
     entity_id: sensor.sensative_strips_access_control
     from: '23'
     to: '22'
+    condition:
+      condition: and
+      conditions:
+      - condition: state
+        entity_id: device_tracker.pk
+        state: 'not_home'
+      - condition: state
+        entity_id: device_tracker.trine
+        state: 'not_home'
   action:
     service: notify.pk
     data_template:

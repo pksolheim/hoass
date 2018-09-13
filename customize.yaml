@@ -18,7 +18,7 @@ sensor.fibaro_system_fgwpef_wall_plug_gen5_sourcenodeid:
   hidden: true
 sensor.fibaro_system_fgms001zw5_motion_sensor_general_2:
   friendly_name: kjeller_bevegelse
-device_tracker.galaxy_s8:
+device_tracker.galaxys8:
   friendly_name: PK
 device_tracker.isabell:
   friendly_name: Trine

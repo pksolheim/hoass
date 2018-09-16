@@ -12,5 +12,5 @@
     minutes: 1
   keep_alive:
     minutes: 60
-  initial_operation_mode: "off"
+  initial_operation_mode: "on"
   away_temp: 17

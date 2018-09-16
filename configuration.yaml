@@ -84,6 +84,7 @@ climate: !include climate/climate.yaml
 ### Input
 binary_sensor: !include_dir_merge_list input/binary_sensors/
 input_number: !include_dir_merge_named input/input_numbers/
+input_boolean: !include_dir_merge_named input/input_booleans/
 
 history_graph:
   temperature_outside:
@@ -92,3 +93,4 @@ history_graph:
     refresh: 120
     entities:
     - sensor.temperatur_ute
+    - sensor.temperatur_stue

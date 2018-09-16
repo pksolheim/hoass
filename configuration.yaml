@@ -79,11 +79,16 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 device_tracker: !include device_tracker.yaml
+climate: !include climate/climate.yaml
 
-binary_sensor:
-  - platform: template
-    sensors:
-      door_open:
-        friendly_name: "Dørsensor"
-        device_class: opening
-        value_template: "{{ is_state('sensor.sensative_strips_access_control', '22') }}"
+### Input
+binary_sensor: !include_dir_merge_list input/binary_sensors/
+input_number: !include_dir_merge_named input/input_numbers/
+
+history_graph:
+  temperature_outside:
+    name: 'Temperatur siste 48 timer'
+    hours_to_show: 48
+    refresh: 120
+    entities:
+    - sensor.temperatur_ute

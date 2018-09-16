@@ -76,7 +76,7 @@ zwave:
   usb_path: /dev/zwave
 
 group: !include groups.yaml
-automation: !include automations.yaml
+automation: !include_dir_merge_list automations/
 script: !include scripts.yaml
 device_tracker: !include device_tracker.yaml
 climate: !include climate/climate.yaml

@@ -4,7 +4,6 @@
   target_sensor: sensor.temperatur_stue
   min_temp: 12
   max_temp: 25
-  ac_mode: False
   target_temp: 22
   cold_tolerance: 0.3
   hot_tolerance: 0
@@ -12,5 +11,5 @@
     minutes: 1
   keep_alive:
     minutes: 60
-  initial_operation_mode: "on"
+  initial_operation_mode: "auto"
   away_temp: 17

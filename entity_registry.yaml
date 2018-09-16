@@ -288,11 +288,6 @@ switch.bryter1_kjeller:
   name: Lys1 Kjeller
   platform: zwave
   unique_id: 8-72057594176946176
-switch.bryter2_stue:
-  config_entry_id:
-  name: Bryter2_stue
-  platform: zwave
-  unique_id: 6-72057594143391744
 zwave.stikk1_stue:
   config_entry_id:
   name: Stikk1_stue
@@ -343,3 +338,8 @@ switch.varme1_stue:
   name: Varme1 Stue
   platform: zwave
   unique_id: 3-72057594093060096
+switch.varme2_stue:
+  config_entry_id:
+  name: Varme 2 stue
+  platform: zwave
+  unique_id: 6-72057594143391744

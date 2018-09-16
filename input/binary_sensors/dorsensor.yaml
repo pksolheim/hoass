@@ -1,0 +1,6 @@
+- platform: template
+  sensors:
+    door_open:
+      friendly_name: "Dørsensor"
+      device_class: opening
+      value_template: "{{ is_state('sensor.sensative_strips_access_control', '22') }}"

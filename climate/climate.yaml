@@ -1,15 +1,15 @@
 - platform: generic_thermostat
-  name: Stue
+  name: 'Stue varme'
   heater: group.stue_varme
   target_sensor: sensor.temperatur_stue
-  min_temp: 15
-  max_temp: 22
+  min_temp: 12
+  max_temp: 25
   ac_mode: False
-  target_temp: 20
+  target_temp: 22
   cold_tolerance: 0.3
   hot_tolerance: 0
   min_cycle_duration:
-    seconds: 5
+    minutes: 1
   keep_alive:
     minutes: 60
   initial_operation_mode: "off"

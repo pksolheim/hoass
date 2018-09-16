@@ -288,11 +288,6 @@ switch.bryter1_kjeller:
   name: Lys1 Kjeller
   platform: zwave
   unique_id: 8-72057594176946176
-switch.bryter1_stue:
-  config_entry_id:
-  name: Bryter1_stue
-  platform: zwave
-  unique_id: 3-72057594093060096
 switch.bryter2_stue:
   config_entry_id:
   name: Bryter2_stue
@@ -343,3 +338,8 @@ sensor.lysstyrke_kjeller:
   name: Lysstyrke kjeller
   platform: zwave
   unique_id: 7-72057594160365618
+switch.varme1_stue:
+  config_entry_id:
+  name: Varme1 Stue
+  platform: zwave
+  unique_id: 3-72057594093060096

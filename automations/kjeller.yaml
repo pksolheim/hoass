@@ -7,10 +7,6 @@
   action:
   - service: switch.turn_on
     entity_id: switch.bryter1_kjeller
-  - service: notify.pk
-    data_template:
-      title: "Lys"
-      message: "Skrur PÅ kjellerlys"
 
 - alias: Kjeller lys, av
   initial_state: True
@@ -23,7 +19,3 @@
   action:
   - service: switch.turn_off
     entity_id: switch.bryter1_kjeller
-  - service: notify.pk
-    data_template:
-      title: "Lys"
-      message: "Skrur AV kjellerlys"

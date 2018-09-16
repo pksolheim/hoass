@@ -1,3 +1,4 @@
+#DØR
 - alias: DoorOpen
   trigger:
     platform: state
@@ -39,3 +40,34 @@
     data_template:
       title: "Dør endret"
       message: "Døren er {% if is_state('sensor.sensative_strips_access_control', '22') %}åpen{% else %}lukket{% endif %}!"
+
+#BEVEGELSE LYS
+- alias: Kjellerlys, på
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bevegelse_kjeller
+    to: 'on'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.bryter1_kjeller
+    - service: notify.pk
+      data_template:
+        title: "Lys"
+        message: "Skrur PÅ kjellerlys"
+
+- alias: Kjeller lys, av
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bevegelse_kjeller
+    to: 'off'
+    for:
+      minutes: 10
+  action:
+    - service: switch.turn_on
+      entity_id: switch.bryter1_kjeller
+    - service: notify.pk
+      data_template:
+        title: "Lys"
+        message: "Skrur AV kjellerlys"

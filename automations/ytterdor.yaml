@@ -1,4 +1,3 @@
-#DØR
 - alias: DoorOpen
   trigger:
     platform: state

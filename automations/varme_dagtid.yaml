@@ -1,0 +1,96 @@
+- alias: 1 Etasje natt ukedag
+  trigger:
+  - platform: time
+    at: '22:00:00'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_tomorrow
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.ferie_modus
+      state: 'off'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.stue_varme
+      temperature: "{{ states.input_number.stue_natt_temperatur.state | float }}"
+
+- alias: 1 Etasje natt helg
+  trigger:
+  - platform: time
+    at: '23:30:00'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_tomorrow
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.ferie_modus
+      state: 'off'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.stue_varme
+      temperature: "{{ states.input_number.stue_natt_temperatur.state | float }}"
+
+- alias: 1 Etasje morgen ukedag
+  trigger:
+  - platform: time
+    at: '07:00:00'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_tomorrow
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.ferie_modus
+      state: 'off'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.stue_varme
+      temperature: "{{ states.input_number.stue_morgen_temperatur.state | float }}"
+
+- alias: 1 Etasje ettermiddag ukedag
+  trigger:
+  - platform: time
+    at: "15:00:00"
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_tomorrow
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.ferie_modus
+      state: 'off'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.stue_varme
+      temperature: "{{ states.input_number.stue_dagtid_temperatur.state | float }}"
+
+- alias: 1 Etasje morgen helg
+  trigger:
+  - platform: time
+    at: '08:30:00'
+  - platform: homeassistant
+    event: start
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_tomorrow
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.ferie_modus
+      state: 'off'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.stue_varme
+      temperature: "{{ states.input_number.stue_dagtid_temperatur.state | float }}"

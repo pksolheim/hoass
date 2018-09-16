@@ -1,4 +1,3 @@
-#BEVEGELSE LYS
 - alias: Kjellerlys, på
   initial_state: True
   trigger:

@@ -13,16 +13,6 @@ binary_sensor.sensor:
   name: Bevegelse Stue
   platform: zwave
   unique_id: 2-72057594076463104
-sensor.fibaro_system_fgms001zw5_motion_sensor_temperature:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 2-72057594076479506
-sensor.fibaro_system_fgms001zw5_motion_sensor_luminance:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 2-72057594076479538
 sensor.fibaro_system_fgms001zw5_motion_sensor_seismic_intensity:
   config_entry_id:
   name:
@@ -198,16 +188,6 @@ sensor.fibaro_system_fgwpef_wall_plug_gen5_energy:
   name:
   platform: zwave
   unique_id: 6-72057594143604738
-sensor.fibaro_system_fgms001zw5_motion_sensor_temperature_2:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 7-72057594160365586
-sensor.fibaro_system_fgms001zw5_motion_sensor_luminance_2:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 7-72057594160365618
 sensor.fibaro_system_fgms001zw5_motion_sensor_seismic_intensity_2:
   config_entry_id:
   name:
@@ -288,19 +268,14 @@ binary_sensor.bevegelse_kjeller:
   name: Bevegelse kjeller
   platform: zwave
   unique_id: 7-72057594160349184
-sensor.fuktighet_ute:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 5-72057594126811634
 sensor.lysstyrke_ute:
   config_entry_id:
-  name:
+  name: Lysstyrke ute
   platform: zwave
   unique_id: 5-72057594126811186
 sensor.temperatur_ute:
   config_entry_id:
-  name:
+  name: Temperatur ute
   platform: zwave
   unique_id: 5-72057594126811154
 zwave.sensative_ute:
@@ -310,7 +285,7 @@ zwave.sensative_ute:
   unique_id: node-5
 switch.bryter1_kjeller:
   config_entry_id:
-  name: Bryter1_kjeller
+  name: Lys1 Kjeller
   platform: zwave
   unique_id: 8-72057594176946176
 switch.bryter1_stue:
@@ -343,3 +318,28 @@ zwave.sensor_stue:
   name: Sensor_stue
   platform: zwave
   unique_id: node-2
+sensor.temperatur_stue:
+  config_entry_id:
+  name: Temperatur stue
+  platform: zwave
+  unique_id: 2-72057594076479506
+sensor.lysstyrke_stue:
+  config_entry_id:
+  name: Lysstyrke stue
+  platform: zwave
+  unique_id: 2-72057594076479538
+sensor.luftfuktighet_ute:
+  config_entry_id:
+  name: Luftfuktighet ute
+  platform: zwave
+  unique_id: 5-72057594126811634
+sensor.temperatur_kjeller:
+  config_entry_id:
+  name: Temperatur kjeller
+  platform: zwave
+  unique_id: 7-72057594160365586
+sensor.lysstyrke_kjeller:
+  config_entry_id:
+  name: Lysstyrke kjeller
+  platform: zwave
+  unique_id: 7-72057594160365618

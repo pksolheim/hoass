@@ -13,7 +13,7 @@ stue_dagtid_temperatur:
   step: 0.5
 
 stue_ettermiddag_temperatur:
-  name: Stue dagtid temperatur
+  name: Stue ettermiddag temperatur
   initial: 22
   min: 15
   max: 25

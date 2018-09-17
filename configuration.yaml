@@ -63,6 +63,10 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
 
 # Text to speech
 tts:

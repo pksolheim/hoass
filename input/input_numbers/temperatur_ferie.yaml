@@ -1,5 +1,5 @@
 ferie_temperatur:
-  name: Temperatur i ferien
+  name: Ferie temperatur
   initial: 10
   min: 8
   max: 18

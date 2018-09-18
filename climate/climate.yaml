@@ -28,4 +28,4 @@
   keep_alive:
     minutes: 60
   initial_operation_mode: "auto"
-  away_temp: 15s
+  away_temp: 15

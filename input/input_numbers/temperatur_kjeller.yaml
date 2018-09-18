@@ -6,7 +6,7 @@ kjeller_hjemmekontor_temperatur:
   step: 0.5
 
 kjeller_normal_temperatur:
-  name: Stue dagtid temperatur
+  name: Kjeller normal temperatur
   initial: 16
   min: 15
   max: 25

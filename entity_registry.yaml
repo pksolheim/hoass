@@ -28,11 +28,6 @@ sensor.fibaro_system_fgms001zw5_motion_sensor_burglar:
   name:
   platform: zwave
   unique_id: 2-72057594077528225
-sensor.fibaro_system_fgms001zw5_motion_sensor_general:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 2-72057594078232577
 sensor.unknown:
   config_entry_id:
   name:
@@ -208,11 +203,6 @@ zwave.fibaro_system_fgms001zw5_motion_sensor:
   name: sensor_kjeller
   platform: zwave
   unique_id: node-7
-sensor.fibaro_system_fgms001zw5_motion_sensor_general_2:
-  config_entry_id:
-  name:
-  platform: zwave
-  unique_id: 7-72057594162118657
 sensor.fibaro_system_fgms001zw5_motion_sensor_alarm_type:
   config_entry_id:
   name:
@@ -343,3 +333,113 @@ switch.varme2_stue:
   name: Varme 2 stue
   platform: zwave
   unique_id: 6-72057594143391744
+sensor.bevegelse_kjeller:
+  config_entry_id:
+  name: Bevegelse kjeller
+  platform: zwave
+  unique_id: 7-72057594162118657
+sensor.bevegelse_stue:
+  config_entry_id:
+  name: Bevegelse stue
+  platform: zwave
+  unique_id: 2-72057594078232577
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power_7:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193920066
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power_8:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936514
+sensor.fibaro_system_fgwpef_wall_plug_gen5_exporting_4:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936896
+sensor.fibaro_system_fgwpef_wall_plug_gen5_sourcenodeid_4:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968609
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power_management_4:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968753
+sensor.fibaro_system_fgwpef_wall_plug_gen5_alarm_type_3:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968577
+sensor.fibaro_system_fgwpef_wall_plug_gen5_alarm_level_3:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 9-72057594194968593
+sensor.fibaro_system_fgwpef_wall_plug_gen5_energy_3:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193936386
+switch.varme1_kjeller:
+  config_entry_id:
+  name: Varme1 Kjeller
+  platform: zwave
+  unique_id: 9-72057594193723392
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power_9:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210697282
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power_10:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210713730
+sensor.fibaro_system_fgwpef_wall_plug_gen5_exporting_5:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210714112
+sensor.fibaro_system_fgwpef_wall_plug_gen5_alarm_type_4:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745793
+sensor.fibaro_system_fgwpef_wall_plug_gen5_alarm_level_4:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745809
+sensor.fibaro_system_fgwpef_wall_plug_gen5_sourcenodeid_5:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745825
+sensor.fibaro_system_fgwpef_wall_plug_gen5_power_management_5:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745969
+sensor.fibaro_system_fgwpef_wall_plug_gen5_energy_4:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210713602
+switch.varme_kjokken:
+  config_entry_id:
+  name: Varme Kjokken
+  platform: zwave
+  unique_id: 10-72057594210500608
+zwave.stikk1_kjokken:
+  config_entry_id:
+  name: Stikk1 kjokken
+  platform: zwave
+  unique_id: node-10
+zwave.stikk2_kjeller:
+  config_entry_id:
+  name: Stikk2 kjeller
+  platform: zwave
+  unique_id: node-9

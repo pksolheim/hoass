@@ -47,7 +47,7 @@
   trigger:
   - platform: state
     entity_id: input_boolean.hjemmekontor_modus
-      to: 'on'
+    to: 'on'
   action:
   - service: climate.set_temperature
       data_template:
@@ -58,7 +58,7 @@
   trigger:
   - platform: state
     entity_id: input_boolean.hjemmekontor_modus
-      to: 'on'
+    to: 'on'
   action:
   - service: climate.set_temperature
       data_template:

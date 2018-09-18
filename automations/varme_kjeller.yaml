@@ -1,0 +1,66 @@
+# Sette på varme på morgenen om det er fridag eller det er hjemmekontor.
+
+- alias: Varme kjeller morgen fridag
+  trigger:
+  - platform: time
+    at: '07:00:00'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_today
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.ferie_modus
+      state: 'off'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.kjeller_varme
+      temperature: "{{ states.input_number.kjeller_hjemmekontor_temperatur.state | float }}"
+
+#Skrur av varmen i kjelleren
+- alias: Varme kjeller ettermiddag fridag
+  trigger:
+  - platform: time
+    at: '18:00:00'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_today
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.hjemmekontor_modus
+      state: 'off'
+    - condition: state
+      entity_id: input_boolean.ferie_modus
+      state: 'off'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.kjeller_varme
+      temperature: "{{ states.input_number.kjeller_normal_temperatur.state | float }}"
+
+
+- alias: Kjeller hjemmekontor PÅ
+  trigger:
+  - platform: time
+    entity_id: input_boolean.hjemmekontor_modus
+      to: 'on'
+  action:
+  - service: climate.set_temperature
+      data_template:
+        entity_id: climate.kjeller_varme
+        temperature: "{{ states.input_number.kjeller_hjemmekontor_temperatur.state | float }}"
+
+- alias: Kjeller hjemmekontor AV
+  trigger:
+  - platform: time
+    entity_id: input_boolean.hjemmekontor_modus
+      to: 'on'
+  action:
+  - service: climate.set_temperature
+      data_template:
+        entity_id: climate.kjeller_varme
+        temperature: "{{ states.input_number.kjeller_normal_temperatur.state | float }}"

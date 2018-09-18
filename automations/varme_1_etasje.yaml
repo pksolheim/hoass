@@ -1,4 +1,4 @@
-- alias: 1 Etasje natt ukedag
+- alias: Varme 1 Etasje natt ukedag
   trigger:
   - platform: time
     at: '22:00:00'
@@ -17,7 +17,7 @@
       entity_id: climate.stue_varme
       temperature: "{{ states.input_number.stue_natt_temperatur.state | float }}"
 
-- alias: 1 Etasje natt helg
+- alias: Varme 1 Etasje natt helg
   trigger:
   - platform: time
     at: '23:30:00'
@@ -36,7 +36,7 @@
       entity_id: climate.stue_varme
       temperature: "{{ states.input_number.stue_natt_temperatur.state | float }}"
 
-- alias: 1 Etasje morgen ukedag
+- alias: Varme 1 Etasje morgen ukedag
   trigger:
   - platform: time
     at: '06:00:00'
@@ -55,7 +55,7 @@
       entity_id: climate.stue_varme
       temperature: "{{ states.input_number.stue_morgen_temperatur.state | float }}"
 
-- alias: 1 Etasje dagtid ukedag
+- alias: Varme 1 Etasje dagtid ukedag
   trigger:
   - platform: time
     at: '08:00:00'
@@ -74,7 +74,7 @@
       entity_id: climate.stue_varme
       temperature: "{{ states.input_number.stue_dagtid_temperatur.state | float }}"
 
-- alias: 1 Etasje ettermiddag ukedag
+- alias: Varme 1 Etasje ettermiddag ukedag
   trigger:
   - platform: time
     at: "15:00:00"
@@ -93,7 +93,7 @@
       entity_id: climate.stue_varme
       temperature: "{{ states.input_number.stue_ettermiddag_temperatur.state | float }}"
 
-- alias: 1 Etasje morgen helg
+- alias: Varme 1 Etasje morgen helg
   trigger:
   - platform: time
     at: '06:00:00'
@@ -113,3 +113,25 @@
     data_template:
       entity_id: climate.stue_varme
       temperature: "{{ states.input_number.stue_ettermiddag_temperatur.state | float }}"
+
+- alias: 1 Etasje hjemmekontor PÅ
+  trigger:
+  - platform: time
+    entity_id: input_boolean.hjemmekontor_modus
+      to: 'on'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.stue_varme
+      temperature: "{{ states.input_number.stue_ettermiddag_temperatur.state | float }}"
+
+- alias: 1 Etasje hjemmekontor AV
+  trigger:
+  - platform: time
+    entity_id: input_boolean.hjemmekontor_modus
+      to: 'off'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.stue_varme
+      temperature: "{{ states.input_number.stue_dagtid_temperatur.state | float }}"

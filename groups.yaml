@@ -3,3 +3,9 @@ stue_varme:
   entities:
   - switch.varme1_stue
   - switch.varme2_stue
+  - switch.varme_kjokken
+
+kjeller_varme:
+  name: Kjeller varme
+  entities:
+  - switch.varme1_kjeller

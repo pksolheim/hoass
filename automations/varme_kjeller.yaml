@@ -50,9 +50,9 @@
     to: 'on'
   action:
   - service: climate.set_temperature
-      data_template:
-        entity_id: climate.kjeller_varme
-        temperature: "{{ states.input_number.kjeller_hjemmekontor_temperatur.state | float }}"
+    data_template:
+      entity_id: climate.kjeller_varme
+      temperature: "{{ states.input_number.kjeller_hjemmekontor_temperatur.state | float }}"
 
 - alias: Kjeller hjemmekontor AV
   trigger:
@@ -61,6 +61,6 @@
     to: 'on'
   action:
   - service: climate.set_temperature
-      data_template:
-        entity_id: climate.kjeller_varme
-        temperature: "{{ states.input_number.kjeller_normal_temperatur.state | float }}"
+    data_template:
+      entity_id: climate.kjeller_varme
+      temperature: "{{ states.input_number.kjeller_normal_temperatur.state | float }}"

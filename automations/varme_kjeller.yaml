@@ -45,7 +45,7 @@
 
 - alias: Kjeller hjemmekontor PÅ
   trigger:
-  - platform: time
+  - platform: state
     entity_id: input_boolean.hjemmekontor_modus
       to: 'on'
   action:
@@ -56,7 +56,7 @@
 
 - alias: Kjeller hjemmekontor AV
   trigger:
-  - platform: time
+  - platform: state
     entity_id: input_boolean.hjemmekontor_modus
       to: 'on'
   action:

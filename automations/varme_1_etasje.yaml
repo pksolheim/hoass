@@ -116,9 +116,9 @@
 
 - alias: 1 Etasje hjemmekontor PÅ
   trigger:
-  - platform: time
+  - platform: state
     entity_id: input_boolean.hjemmekontor_modus
-      to: 'on'
+    to: 'on'
   action:
   - service: climate.set_temperature
     data_template:
@@ -127,9 +127,9 @@
 
 - alias: 1 Etasje hjemmekontor AV
   trigger:
-  - platform: time
+  - platform: state
     entity_id: input_boolean.hjemmekontor_modus
-      to: 'off'
+    to: 'off'
   action:
   - service: climate.set_temperature
     data_template:

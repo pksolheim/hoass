@@ -125,3 +125,14 @@
       entity_id: climate.stue_varme
       temperature: "{{ states.input_number.stue_ettermiddag_temperatur.state | float }}"
 
+- alias: Feriemodus 1 Etasje PÅ
+  trigger:
+  - platform: state
+    entity_id: input_boolean.ferie_modus
+    to: 'on'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.stue_varme
+      temperature: "{{ states.input_number.ferie_temperatur.state | float }}"
+

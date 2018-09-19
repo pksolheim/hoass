@@ -98,3 +98,4 @@ history_graph:
     entities:
     - sensor.temperatur_ute
     - sensor.temperatur_stue
+    - sensor.temperatur_kjeller

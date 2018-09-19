@@ -64,3 +64,14 @@
     data_template:
       entity_id: climate.kjeller_varme
       temperature: "{{ states.input_number.kjeller_normal_temperatur.state | float }}"
+
+- alias: Feriemodus kjeller
+  trigger:
+  - platform: state
+    entity_id: input_boolean.ferie_modus
+    to: 'on'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.kjeller_varme
+      temperature: "{{ states.input_number.ferie_temperatur.state | float }}"

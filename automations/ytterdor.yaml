@@ -1,9 +1,9 @@
 - alias: DoorOpen
   trigger:
     platform: state
-    entity_id: sensor.sensative_strips_access_control
-    from: '22'
-    to: '23'
+    entity_id: binary_sensor.door_open
+    from: 'off'
+    to: 'on'
   condition:
     condition: and
     conditions:
@@ -22,9 +22,9 @@
 - alias: DoorClosed
   trigger:
     platform: state
-    entity_id: sensor.sensative_strips_access_control
-    from: '23'
-    to: '22'
+    entity_id: binary_sensor.door_open
+    from: 'on'
+    to: 'off'
   condition:
     condition: and
     conditions:

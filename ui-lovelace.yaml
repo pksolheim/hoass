@@ -25,13 +25,14 @@ views:
   # The filter card will filter entities for their state
   - type: entity-filter
     entities:
-    - device_tracker.paulus
-    - device_tracker.anne_there
+    - device_tracker.galaxys8
+    - device_tracker.trine
+    - device_tracker.ekstratelefonen
     state_filter:
     - 'home'
     card:
       type: glance
-      title: People that are home
+      title: Hvem er hjemme
 
     # The picture entity card will represent an entity with a picture
   - type: picture-entity

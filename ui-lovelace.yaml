@@ -13,7 +13,8 @@ excluded_entities:
 - weblink.router
 views:
 # View tab title.
-- title: Example
+- icon: mdi:home-assistant
+  title: Hoved
   # Optional unique id for direct access /lovelace/${id}
   id: example
   # Optional background (overwrites the global background).
@@ -39,10 +40,14 @@ views:
     image: https://www.home-assistant.io/images/default-social.png
     entity: light.bed_light
 
+  - type: entities
+      title: Termostat
+      entities:
+      - climate.stue_varme
+      - climate.kjeller_varme
+
   # Specify a tab icon if you want the view tab to be an icon.
-- icon: mdi:home-assistant
-  # Title of the view. Will be used as the tooltip for tab icon
-  title: Second view
+- title: Second view
   cards:
   # Entities card will take a list of entities and show their state.
   - type: entities

@@ -74,6 +74,15 @@ views:
     entities:
     - input_boolean.ferie_modus
     - input_boolean.hjemmekontor_modus
+  - type: entities
+    title: Termostat
+    entities:
+    - climate.stue_varme
+    - climate.kjeller_varme
+  - type: history-graph
+    title: 'Siste 48 timer'
+    entities:
+    - history_graph.temperatur_siste_48_timer
 
 - icon: mdi:settings
   title: Innstillinger

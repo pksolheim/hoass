@@ -46,27 +46,14 @@ views:
     - climate.stue_varme
     - climate.kjeller_varme
 
-  # Specify a tab icon if you want the view tab to be an icon.
 - title: Second view
   cards:
-  # Entities card will take a list of entities and show their state.
   - type: entities
-    # Title of the entities card
     title: Example
-    # The entities here will be shown in the same order as specified.
-    # Each entry is an entity ID or a map with extra options.
     entities:
-    - light.kitchen
-    - switch.ac
-    - entity: light.living_room
-      # Override the name to use
-      name: LR Lights
+    - entity: group.stue_varme
+      name: Stue varme
 
-    # The markdown card will render markdown text.
-  - type: markdown
-    title: Lovelace
-    content: >
-      Welcome to your **Lovelace UI**.
 
 - icon: mdi:settings
   title: Innstillinger

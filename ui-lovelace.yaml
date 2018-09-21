@@ -58,22 +58,22 @@ views:
     - switch.varme2_stue
     - switch.varme_kjokken
   - type: entities
-      title: Temperaturer
-      show_header_toggle: false
-      entities:
-      - input_number.ferie_temperatur
-      - input_number.kjeller_hjemmekontor_temperatur
-      - input_number.kjeller_normal_temperatur
-      - input_number.stue_morgen_temperatur
-      - input_number.stue_dagtid_temperatur
-      - input_number.stue_ettermiddag_temperatur
-      - input_number.stue_natt_temperatur
+    title: Temperaturer
+    show_header_toggle: false
+    entities:
+    - input_number.ferie_temperatur
+    - input_number.kjeller_hjemmekontor_temperatur
+    - input_number.kjeller_normal_temperatur
+    - input_number.stue_morgen_temperatur
+    - input_number.stue_dagtid_temperatur
+    - input_number.stue_ettermiddag_temperatur
+    - input_number.stue_natt_temperatur
   - type: entities
-      title: Moduser
-      show_header_toggle: false
-      entities:
-      - input_boolean.ferie_modus
-      - input_boolean.hjemmekontor_modus
+    title: Moduser
+    show_header_toggle: false
+    entities:
+    - input_boolean.ferie_modus
+    - input_boolean.hjemmekontor_modus
 
 - icon: mdi:settings
   title: Innstillinger

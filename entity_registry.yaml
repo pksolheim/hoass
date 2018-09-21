@@ -140,7 +140,7 @@ zwave.usb_stick:
   unique_id: node-1
 zwave.stripytterdor:
   config_entry_id:
-  name:
+  name: Ytterdor
   platform: zwave
   unique_id: node-4
 sensor.fibaro_system_fgwpef_wall_plug_gen5_power_3:

@@ -49,10 +49,13 @@ views:
 - title: Second view
   cards:
   - type: entities
-    title: Example
+    title: Første etasje varme
     entities:
     - entity: group.stue_varme
-      name: Stue varme
+      name: Alle
+    - switch.varme1_stue
+    - switch.varme2_stue
+    - switch.varme_kjokken
 
 
 - icon: mdi:settings

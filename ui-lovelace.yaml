@@ -41,10 +41,10 @@ views:
     entity: light.bed_light
 
   - type: entities
-      title: Termostat
-      entities:
-      - climate.stue_varme
-      - climate.kjeller_varme
+    title: Termostat
+    entities:
+    - climate.stue_varme
+    - climate.kjeller_varme
 
   # Specify a tab icon if you want the view tab to be an icon.
 - title: Second view
@@ -68,3 +68,24 @@ views:
     content: >
       Welcome to your **Lovelace UI**.
 
+- icon: mdi:settings
+  title: Innstillinger
+  cards:
+  - type: entities
+    title: Lovelace
+    entities:
+    - light.kitchen
+
+- title: Lys
+  cards:
+  - type: entities
+    title: Lovelace
+    entities:
+    - light.kitchen
+
+- title: Varme
+  cards:
+  - type: entities
+    title: Lovelace
+    entities:
+    - light.kitchen

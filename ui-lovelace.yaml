@@ -33,7 +33,7 @@ views:
     - 'home'
     card:
       type: glance
-      title: People that are home
+      title: Hvem er hjemme
 
     # The picture entity card will represent an entity with a picture
   - type: picture-entity

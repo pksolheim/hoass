@@ -29,7 +29,7 @@
         {{ [bri+30, 249] | min }}
   - service: light.turn_on
     data_template:
-      entity_id: llight.ambientdimmbar1
+      entity_id: light.ambientdimmbar1
       brightness: >
         {% set bri = states.light.ambientdimmbar1.attributes.brightness | int %}
         {{ [bri+30, 249] | min }}

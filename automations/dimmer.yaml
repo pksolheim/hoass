@@ -1,4 +1,4 @@
-- alias: 'Lys stue av/på.'
+- alias: 'Lys stue on/off'
   initial_state: 'on'
   trigger:
     platform: event
@@ -12,7 +12,7 @@
   - service: light.toggle
     entity_id: light.ambientdimmbar1
 
-- alias: 'Lys stue dimme opp.'
+- alias: 'Lys stue dimme opp'
   initial_state: 'on'
   trigger:
     platform: event
@@ -34,7 +34,7 @@
         {% set bri = states.light.ambientdimmbar1.attributes.brightness | int %}
         {{ [bri+30, 249] | min }}
 
-- alias: 'Lys stue dimme ned.'
+- alias: 'Lys stue dimme ned'
   initial_state: 'on'
   trigger:
     platform: event

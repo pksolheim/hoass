@@ -6,10 +6,10 @@
     event_data:
       id: fjernkontroll1
       event: 1002
-    action:
-    - service: light.toggle
+  action:
+  - service: light.toggle
       entity_id: light.hvitdimmbar1
-    - service: light.toggle
+  - service: light.toggle
       entity_id: light.ambientdimmbar1
 
 - alias: 'Increase brightness of lamp from dimmer'
@@ -28,11 +28,11 @@
         {% set bri = states.light.hvitdimmbar1.attributes.brightness | int %}
         {{ [bri+30, 249] | min }}
   - service: light.turn_on
-      data_template:
-        entity_id: llight.ambientdimmbar1
-        brightness: >
-          {% set bri = states.light.ambientdimmbar1.attributes.brightness | int %}
-          {{ [bri+30, 249] | min }}
+    data_template:
+      entity_id: llight.ambientdimmbar1
+      brightness: >
+        {% set bri = states.light.ambientdimmbar1.attributes.brightness | int %}
+        {{ [bri+30, 249] | min }}
 
 - alias: 'Decrease brightness of lamp from dimmer'
   initial_state: 'on'

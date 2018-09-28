@@ -14,3 +14,9 @@ lys:
   name: Kjeller lys
   entities:
   - switch.bryter1_kjeller
+
+lys_stue:
+  name: Lys stue
+  entities:
+    - light.ambientdimmbar1
+    - light.hvitdimmbar1

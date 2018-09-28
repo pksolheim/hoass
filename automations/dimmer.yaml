@@ -9,6 +9,3 @@
   action:
   - service: light.toggle
     entity_id: light.hvitdimmbar1
-  - service: light.toggle
-    entity_id: light.ambientdimmbar1
-

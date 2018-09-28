@@ -34,6 +34,7 @@ views:
     card:
       type: glance
       title: Hvem er hjemme
+      aspect_ratio: 75%
 
     # The picture entity card will represent an entity with a picture
   - type: picture-entity

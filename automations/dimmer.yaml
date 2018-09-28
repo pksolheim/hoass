@@ -8,9 +8,9 @@
       event: 1002
   action:
   - service: light.toggle
-      entity_id: light.hvitdimmbar1
+    entity_id: light.hvitdimmbar1
   - service: light.toggle
-      entity_id: light.ambientdimmbar1
+    entity_id: light.ambientdimmbar1
 
 - alias: 'Increase brightness of lamp from dimmer'
   initial_state: 'on'

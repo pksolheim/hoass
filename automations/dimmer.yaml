@@ -8,4 +8,4 @@
       event: 1002
   action:
   - service: light.toggle
-    entity_id: light.hvitdimmbar1
+  entity_id: light.hvitdimmbar1

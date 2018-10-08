@@ -1,13 +1,13 @@
-#- alias: Utelys pa, solnedgang
-#  initial_state: true
-#  trigger:
-#  - event: sunset
-#    offset: -00:30:00
-#    platform: sun
-#  action:
-#  - data:
-#    entity_id: light.garage
-#    service: light.turn_on
+- alias: Utelys pa, solnedgang
+  initial_state: true
+  trigger:
+  - event: sunset
+    offset: -00:30:00
+    platform: sun
+  action:
+  - data:
+    entity_id: light.garage
+    service: light.turn_on
 #
 #- alias: Utelys av, soloppgang
 #  initial_state: true

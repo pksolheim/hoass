@@ -4,6 +4,7 @@
     platform: state
     entity_id: binary_sensor.bevegelse_kjeller
     to: 'on'
+  //TODO: Condition for at ikke lyset allerede er på! :-)
   action:
   - service: switch.turn_on
     entity_id: switch.bryter1_kjeller

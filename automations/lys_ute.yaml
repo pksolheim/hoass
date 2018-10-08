@@ -1,4 +1,4 @@
-#- alias: Utelys på, solnedgang
+#- alias: Utelys pa, solnedgang
 #  initial_state: true
 #  trigger:
 #  - event: sunset

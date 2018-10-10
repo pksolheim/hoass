@@ -24,7 +24,7 @@
       entity_id: light.kjeller
       brightness: >
         {% set bri = states.light.kjeller.attributes.brightness | int %}
-        {{ [bri+30, 249] | min }}
+        {{ [bri+30, 254] | min }}
 
 - alias: 'Lys kjeller dimme ned'
   initial_state: 'on'
@@ -40,7 +40,7 @@
       entity_id: light.kjeller
       brightness: >
         {% set bri = states.light.kjeller.attributes.brightness | int %}
-        {{ [bri-30, 0] | max }}
+        {{ [bri-100, 0] | max }}
 
 - alias: 'Lys kjeller varme opp'
   initial_state: 'on'
@@ -56,7 +56,7 @@
       entity_id: light.kjeller
       color_temp: >
         {% set kel = states.light.kjeller.attributes.color_temp | int %}
-        {{ [kel+30, 249] | min }}
+        {{ [kel+50, 500] | min }}
 
 - alias: 'Lys kjeller varme ned'
   initial_state: 'on'
@@ -72,4 +72,4 @@
       entity_id: light.kjeller
       color_temp: >
         {% set kel = states.light.kjeller.attributes.color_temp | int %}
-        {{ [kel-30, 0] | max }}
+        {{ [kel-50, 153] | max }}

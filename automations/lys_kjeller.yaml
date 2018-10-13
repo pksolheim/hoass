@@ -9,8 +9,6 @@
     entity_id: light.kjeller
     state: 'off'
   action:
-  - service: switch.turn_on
-    entity_id: switch.bryter1_kjeller
   - service: light.turn_on
     data:
       entity_id: light.kjeller
@@ -26,7 +24,5 @@
     for:
       minutes: 10
   action:
-  - service: switch.turn_off
-    entity_id: switch.bryter1_kjeller
   - service: light.turn_off
     entity_id: light.kjeller

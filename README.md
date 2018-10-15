@@ -9,4 +9,13 @@ docker restart home-assistant
 docker logs home-assistant
 
 
+Oppgradere:
+
+docker stop home-assistant
+docker rm home-assistant 
+docker pull homeassistant/raspberrypi3-homeassistant:latest
+docker run -d --name="home-assistant" -v /home/pi/ha:/config -v /etc/localtime:/etc/localtime:ro --device /dev/zwave:/dev/zwave -p 8123:8123 homeassistant/raspberrypi3-homeassistant
+
+
+Deconz:
 docker run -d --name=deconz --net=host --restart=always -v /home/pi/deconz:/root/.local/share/dresden-elektronik/deCONZ --device=/dev/ttyUSB0 marthoc/deconz

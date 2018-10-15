@@ -9,9 +9,3 @@ kjeller_varme:
   name: Kjeller varme
   entities:
   - switch.varme1_kjeller
-
-lys_stue:
-  name: Lys stue
-  entities:
-    - light.ambientdimmbar1
-    - light.hvitdimmbar1

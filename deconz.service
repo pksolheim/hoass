@@ -1,0 +1,12 @@
+[Unit]
+Description=Deconz
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker start -a deconz
+ExecStop=/usr/bin/docker stop -t 2 deconz
+
+[Install]
+WantedBy=default.target

@@ -1,48 +1,6 @@
-sensor.sensative_strips_burglar:
-  hidden: true
-binary_sensor.sensor_2:
-  hidden: true
-sensor.alarm_level_3:
-  hidden: true
-sensor.sensative_strips_access_control:
-  hidden: true
-sensor.alarm_type_3:
-  hidden: true
-sensor.sensative_strips_sourcenodeid:
-  hidden: true
-sensor.fibaro_system_fgms001zw5_motion_sensor_sourcenodeid:
-  hidden: true
-sensor.fibaro_system_fgms001zw5_motion_sensor_seismic_intensity:
-  hidden: true
-sensor.fibaro_system_fgwpef_wall_plug_gen5_sourcenodeid:
-  hidden: true
-sensor.fibaro_system_fgms001zw5_motion_sensor_general_2:
-  friendly_name: kjeller_bevegelse
 device_tracker.ekstratelefonen:
   friendly_name: Ekstratelefonen
 device_tracker.galaxys8:
   friendly_name: PK
 device_tracker.trine:
   friendly_name: Trine
-group.all_automations:
-  hidden: true
-zwave.sensative_ute:
-  hidden: true
-zwave.sensor_stue:
-  hidden: true
-zwave.stikk1_kjokken:
-  hidden: true
-zwave.stikk1_kjeller:
-  hidden: true
-zwave.stikk1_stue:
-  hidden: true
-zwave.stikk2_kjeller:
-  hidden: true
-zwave.stikk2_stue:
-  hidden: true
-zwave.usb_stick:
-  hidden: true
-zwave.stripytterdor:
-  hidden: true
-zwave.fibaro_system_fgms001zw5_motion_sensor:
-  hidden: true

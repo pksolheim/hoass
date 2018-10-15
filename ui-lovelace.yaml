@@ -1,0 +1,102 @@
+title: The Solheim/Johanssons
+
+resources:
+- url: /local/my-custom-card.js
+  type: js
+- url: /local/my-webfont.css
+  type: css
+
+# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+background: center / cover no-repeat url("/background.png") fixed
+# Exclude entities from "Unused entities" view
+excluded_entities:
+- weblink.router
+views:
+# View tab title.
+- icon: mdi:home-assistant
+  title: Hoved
+  # Optional unique id for direct access /lovelace/${id}
+  id: example
+  # Optional background (overwrites the global background).
+  background: radial-gradient(crimson, skyblue)
+  # Each view can have a different theme applied. Theme should be defined in the frontend.
+  theme: dark-mode
+  # The cards to show on this view.
+  cards:
+  # The filter card will filter entities for their state
+  - type: entity-filter
+    entities:
+    - device_tracker.galaxys8
+    - device_tracker.trine
+    - device_tracker.ekstratelefonen
+    state_filter:
+    - 'home'
+    card:
+      type: glance
+      title: Hvem er hjemme
+      aspect_ratio: 75%
+
+    # The picture entity card will represent an entity with a picture
+  - type: picture-entity
+    image: https://www.home-assistant.io/images/default-social.png
+    entity: light.bed_light
+
+  - type: entities
+    title: Termostat
+    entities:
+    - climate.stue_varme
+    - climate.kjeller_varme
+
+- title: Varme
+  cards:
+  - type: entities
+    title: Første etasje varme
+    show_header_toggle: false
+    entities:
+    - entity: group.stue_varme
+      name: Alle
+    - switch.varme1_stue
+    - switch.varme2_stue
+    - switch.varme_kjokken
+  - type: entities
+    title: Temperaturer
+    show_header_toggle: false
+    entities:
+    - input_number.ferie_temperatur
+    - input_number.kjeller_hjemmekontor_temperatur
+    - input_number.kjeller_normal_temperatur
+    - input_number.stue_morgen_temperatur
+    - input_number.stue_dagtid_temperatur
+    - input_number.stue_ettermiddag_temperatur
+    - input_number.stue_natt_temperatur
+  - type: entities
+    title: Moduser
+    show_header_toggle: false
+    entities:
+    - input_boolean.ferie_modus
+    - input_boolean.hjemmekontor_modus
+  - type: entities
+    title: Termostat
+    entities:
+    - climate.stue_varme
+    - climate.kjeller_varme
+  - type: history-graph
+    title: 'Siste 48 timer'
+    entities:
+    - history_graph.temperatur_siste_48_timer
+
+- icon: mdi:settings
+  title: Innstillinger
+  cards:
+  - type: entities
+    title: Lovelace
+    entities:
+    - light.kitchen
+
+- title: Lys
+  cards:
+  - type: entities
+    title: Lovelace
+    entities:
+    - light.kitchen
+

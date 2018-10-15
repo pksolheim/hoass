@@ -4,9 +4,16 @@
     platform: state
     entity_id: binary_sensor.bevegelse_kjeller
     to: 'on'
+  condition:
+  - condition: state
+    entity_id: light.kjeller
+    state: 'off'
   action:
-  - service: switch.turn_on
-    entity_id: switch.bryter1_kjeller
+  - service: light.turn_on
+    data:
+      entity_id: light.kjeller
+      brightness: 1000
+      kelvin: 2700
 
 - alias: Kjeller lys, av
   initial_state: True
@@ -17,5 +24,5 @@
     for:
       minutes: 10
   action:
-  - service: switch.turn_off
-    entity_id: switch.bryter1_kjeller
+  - service: light.turn_off
+    entity_id: light.kjeller

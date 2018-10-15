@@ -1,0 +1,75 @@
+- alias: 'Lys kjeller on/off'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: fjernkontroll2
+      event: 1002
+  action:
+  - service: light.toggle
+    entity_id: light.kjeller
+
+- alias: 'Lys kjeller dimme opp'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: fjernkontroll2
+      event: 2002
+  action:
+  - service: light.turn_on
+    data_template:
+      entity_id: light.kjeller
+      brightness: >
+        {% set bri = states.light.kjeller.attributes.brightness | int %}
+        {{ [bri+30, 254] | min }}
+
+- alias: 'Lys kjeller dimme ned'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: fjernkontroll2
+      event: 3002
+  action:
+  - service: light.turn_on
+    data_template:
+      entity_id: light.kjeller
+      brightness: >
+        {% set bri = states.light.kjeller.attributes.brightness | int %}
+        {{ [bri-100, 0] | max }}
+
+- alias: 'Lys kjeller varme opp'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: fjernkontroll2
+      event: 4002
+  action:
+  - service: light.turn_on
+    data_template:
+      entity_id: light.kjeller
+      color_temp: >
+        {% set kel = states.light.kjeller.attributes.color_temp | int %}
+        {{ [kel+50, 500] | min }}
+
+- alias: 'Lys kjeller varme ned'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: fjernkontroll2
+      event: 5002
+  action:
+  - service: light.turn_on
+    data_template:
+      entity_id: light.kjeller
+      color_temp: >
+        {% set kel = states.light.kjeller.attributes.color_temp | int %}
+        {{ [kel-50, 153] | max }}

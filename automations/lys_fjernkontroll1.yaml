@@ -7,7 +7,7 @@
       id: fjernkontroll1
       event: 1002
   action:
-  - service: light.turn_off
+  - service: light.turn_on
     entity_id: light.stue
     brightness: >
       {% set bri = states.light.stue.attributes.brightness | int %}

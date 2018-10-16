@@ -9,7 +9,7 @@
   action:
   - service: light.turn_on
     entity_id: light.stue
-    brightness: max
+    brightness: 255
 #
 #- alias: 'Lys stue off'
 #  initial_state: 'on'

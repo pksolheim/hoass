@@ -9,9 +9,7 @@
   action:
   - service: light.turn_on
     entity_id: light.stue
-    brightness: >
-      {% set bri = states.light.stue.attributes.brightness | int %}
-      {{  max }}
+    brightness: max
 
 - alias: 'Lys stue off'
   initial_state: 'on'

@@ -1,4 +1,4 @@
-- alias: 'Lys stue on/off'
+- alias: 'Lys stue on'
   initial_state: 'on'
   trigger:
     platform: event
@@ -7,10 +7,23 @@
       id: fjernkontroll1
       event: 1002
   action:
-  - service: light.toggle
-    entity_id: light.hvitdimmbar1
-  - service: light.toggle
-    entity_id: light.ambientdimmbar1
+  - service: light.turn_off
+    entity_id: light.stue
+    brightness: >
+      {% set bri = states.light.stue.attributes.brightness | int %}
+      {{  max }}
+
+- alias: 'Lys stue off'
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: fjernkontroll1
+      event: 4002
+  action:
+  - service: light.turn_off
+    entity_id: light.stue
 
 - alias: 'Lys stue dimme opp'
   initial_state: 'on'
@@ -23,15 +36,15 @@
   action:
   - service: light.turn_on
     data_template:
-      entity_id: light.hvitdimmbar1
+      entity_id: light.spisebord
       brightness: >
-        {% set bri = states.light.hvitdimmbar1.attributes.brightness | int %}
+        {% set bri = states.light.spisebord.attributes.brightness | int %}
         {{ [bri+30, 249] | min }}
   - service: light.turn_on
     data_template:
-      entity_id: light.ambientdimmbar1
+      entity_id: light.sofakrok1
       brightness: >
-        {% set bri = states.light.ambientdimmbar1.attributes.brightness | int %}
+        {% set bri = states.light.sofakrok1.attributes.brightness | int %}
         {{ [bri+30, 249] | min }}
 
 - alias: 'Lys stue dimme ned'
@@ -45,13 +58,13 @@
   action:
   - service: light.turn_on
     data_template:
-      entity_id: light.hvitdimmbar1
+      entity_id: light.stue
       brightness: >
-        {% set bri = states.light.hvitdimmbar1.attributes.brightness | int %}
+        {% set bri = states.light.spisebord.attributes.brightness | int %}
         {{ [bri-30, 0] | max }}
   - service: light.turn_on
     data_template:
-      entity_id: light.ambientdimmbar1
+      entity_id: light.sofakrok1
       brightness: >
-        {% set bri = states.light.ambientdimmbar1.attributes.brightness | int %}
+        {% set bri = states.light.sofakrok1.attributes.brightness | int %}
         {{ [bri-30, 0] | max }}

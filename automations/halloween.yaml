@@ -29,7 +29,7 @@
       entity_id: light.pyntelampe
       state: 'on'
     - condition: state
-        entity_id: input_boolean.halloween_modus
-        state: 'on'
+      entity_id: input_boolean.halloween_modus
+      state: 'on'
   action:
   - service: script.change_pyntelampe

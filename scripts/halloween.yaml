@@ -65,12 +65,12 @@ light_flash:
   sequence:
   - service: homeassistant.turn_on
     data:
-      entity_id: light.spisebord
+      entity_id: light.gang
   - delay:
-      seconds: 3
+      seconds: 1
   - service: homeassistant.turn_off
     data:
-      entity_id: light.spisebord
+      entity_id: light.gang
   - service: script.turn_on
     data:
       entity_id: script.light_loop
@@ -79,7 +79,7 @@ light_loop:
   alias: Light flash loop
   sequence:
   - delay:
-      seconds: 3
+      seconds: 1
   - service: script.turn_on
     data:
       entity_id: script.light_flash
@@ -94,4 +94,4 @@ light_flash_cancel:
      data:
        entity_id: script.light_loop
   - service: light.turn_on
-    entity_id: light.spisebord
+    entity_id: light.gang

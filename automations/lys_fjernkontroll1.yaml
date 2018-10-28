@@ -23,7 +23,6 @@
   action:
   - service: light.turn_off
     entity_id: light.stue
-  action:
   - service: light.turn_off
     entity_id: light.gang
 

@@ -9,6 +9,8 @@
   action:
   - service: light.turn_on
     entity_id: light.stue
+  - service: light.turn_on
+      entity_id: light.gang
 
 - alias: 'Lys stue off'
   initial_state: 'on'
@@ -21,6 +23,9 @@
   action:
   - service: light.turn_off
     entity_id: light.stue
+  action:
+  - service: light.turn_off
+    entity_id: light.gang
 
 - alias: 'Lys stue dimme opp'
   initial_state: 'on'

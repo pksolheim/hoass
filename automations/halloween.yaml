@@ -1,5 +1,4 @@
-automation:
-  alias: 'Halloween skifte farge'
+- alias: 'Halloween skifte farge'
   initial_state: False
   hide_entity: False
   trigger:

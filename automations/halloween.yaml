@@ -21,7 +21,7 @@
 - alias: 'Halloween skifte farge'
   trigger:
     platform: time
-    seconds: /5
+    seconds: /15
   condition:
     condition: and
     conditions:

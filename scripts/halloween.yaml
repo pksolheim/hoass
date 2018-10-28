@@ -49,7 +49,7 @@ preprocess_color:
 
         {{ (255*r)|round(0) }}, {{ (255*g)|round(0) }}, {{ (255*b)|round(0) }}, {{ (360*h)|int }}
 
-      transition: 10
+      transition: 5
 
 set_color:
   sequence:

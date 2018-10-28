@@ -5,3 +5,7 @@ ferie_modus:
 hjemmekontor_modus:
   name: Hjemmekontor
   initial: off
+
+halloween_modus:
+  name: Halloween
+  initial: off

@@ -1,18 +1,35 @@
+#- alias: 'Halloween skifte farge'
+#  initial_state: False
+#  hide_entity: False
+#  trigger:
+#    platform: time
+#    seconds: '/5'
+#  condition:
+#  - condition: state
+#    entity_id: input_boolean.halloween_modus
+#    state: 'on'
+#  action:
+#    service: homeassistant.turn_on
+#    entity_id:
+#    - light.pyntelampe
+#    data:
+#      effect: random
+#      transition: 1
+#      brightness: 255
+
+
 - alias: 'Halloween skifte farge'
-  initial_state: False
-  hide_entity: False
   trigger:
     platform: time
-    seconds: '/5'
+    seconds: /30
   condition:
-  - condition: state
-    entity_id: input_boolean.halloween_modus
-    state: 'on'
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: light.pyntelampe
+      state: 'on'
+    - condition: state
+        entity_id: input_boolean.halloween_modus
+        state: 'on'
   action:
-    service: homeassistant.turn_on
-    entity_id:
-    - light.pyntelampe
-    data:
-      effect: random
-      transition: 1
-      brightness: 255
+  - service: script.change_pyntelampe

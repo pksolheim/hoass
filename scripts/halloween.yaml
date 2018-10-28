@@ -58,3 +58,39 @@ set_color:
       entity_id: '{{ id }}'
       rgb_color: [ "{{ colors.split(',')[0]|int }}", "{{ colors.split(',')[1]|int }}", "{{ colors.split(',')[2]|int }}" ]
       transition: "{{ transition }}"
+
+
+light_flash:
+  alias: Gang flash on
+  sequence:
+  - service: homeassistant.turn_on
+    data:
+      entity_id: light.spisebord
+  - delay:
+      seconds: 3
+  - service: homeassistant.turn_off
+    data:
+      entity_id: light.spisebord
+  - service: script.turn_on
+    data:
+      entity_id: script.light_loop
+
+light_loop:
+  alias: Light flash loop
+  sequence:
+  - delay:
+      #### time for flash light off
+      seconds: 3
+  - service: script.turn_on
+    data:
+      entity_id: script.light_flash
+
+light_flash_cancel:
+  alias: Cancel Light Flash
+  sequence:
+  -  service: script.turn_off
+     data:
+       entity_id: script.light_flash
+  -  service: script.turn_off
+     data:
+       entity_id: script.light_loop

@@ -12,8 +12,8 @@ preprocess_color:
       id: '{{ id }}'
       colors: >-
         {%- set h = (range(0, 360)|random)/360 %}
-        {%- set s = states.input_number.halloween_saturation.state|float %}
-        {%- set v = states.input_number.halloween_brightness.state|float %}
+        {%- set s = 1 %}
+        {%- set v = 1 %}
 
         {%- set i = (h * 6)|int %}
         {%- set f = h * 6 - i %}

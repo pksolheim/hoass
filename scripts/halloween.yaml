@@ -61,7 +61,7 @@ set_color:
 
 
 light_flash:
-  alias: Gang flash on
+  alias: Light flash on
   sequence:
   - service: homeassistant.turn_on
     data:
@@ -79,7 +79,6 @@ light_loop:
   alias: Light flash loop
   sequence:
   - delay:
-      #### time for flash light off
       seconds: 3
   - service: script.turn_on
     data:
@@ -94,3 +93,5 @@ light_flash_cancel:
   -  service: script.turn_off
      data:
        entity_id: script.light_loop
+  - service: light.turn_on
+    entity_id: light.spisebord

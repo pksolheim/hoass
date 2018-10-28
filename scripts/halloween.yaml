@@ -1,5 +1,5 @@
 change_pyntelampe:
-  alias: Halloweenmodus
+  alias: Change pyntelampe
   sequence:
   - service: script.preprocess_color
     data:

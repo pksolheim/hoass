@@ -77,7 +77,7 @@
 - alias: Varme 1 Etasje ettermiddag ukedag
   trigger:
   - platform: time
-    at: "15:00:00"
+    at: "14:00:00"
   condition:
     condition: and
     conditions:

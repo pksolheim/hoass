@@ -85,8 +85,8 @@ script: !include_dir_merge_named scripts/
 device_tracker: !include device_tracker.yaml
 climate: !include climate/climate.yaml
 
-
-deconz:
+light:
+  platform: hue
   host: 192.168.1.200
   port: 81
 

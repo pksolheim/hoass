@@ -18,4 +18,4 @@ docker run -d --name="home-assistant" -v /home/pi/ha:/config -v /etc/localtime:/
 
 
 Deconz:
-docker run -d --name=deconz --restart=always -v /home/pi/deconz:/root/.local/share/dresden-elektronik/deCONZ --device=/dev/ttyUSB0 -p 81:80 marthoc/deconz
+docker run -d --name=deconz --net=host --restart=always -v /home/pi/deconz:/root/.local/share/dresden-elektronik/deCONZ --device=/dev/ttyUSB0 marthoc/deconz

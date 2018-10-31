@@ -87,7 +87,7 @@ climate: !include climate/climate.yaml
 
 
 deconz:
-  host: 192.168.1.200
+  host: 192.168.1.200:81
 
 ### Input
 binary_sensor: !include_dir_merge_list input/binary_sensors/

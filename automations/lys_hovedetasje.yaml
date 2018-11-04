@@ -4,15 +4,6 @@
     platform: state
     entity_id: binary_sensor.bevegelse_stue
     to: 'on'
-  condition:
-    condition: or
-    conditions:
-    - condition: state
-      entity_id: light.stue
-      state: 'off'
-    - condition: state
-      entity_id: light.gang
-      state: 'off'
   action:
   - service: light.turn_on
     entity_id: light.stue

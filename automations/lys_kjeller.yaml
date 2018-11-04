@@ -83,7 +83,7 @@
     to: 'off'
   condition:
   - condition: state
-    entity_id: input_boolean.your_switch_auto_on
+    entity_id: input_boolean.kjeller_lights_on_auto
     state: 'on'
   action:
   - service: input_boolean.turn_off

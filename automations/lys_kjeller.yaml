@@ -48,7 +48,7 @@
       brightness: 50
       kelvin: 2700
   - service: input_boolean.turn_on
-      entity_id: input_boolean.kjeller_lights_dimmed_auto
+    entity_id: input_boolean.kjeller_lights_dimmed_auto
 
 - alias: "Kjellerlys, av ingen bevegelse"
   initial_state: True

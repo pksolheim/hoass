@@ -11,8 +11,8 @@
       entity_id: light.kjeller
       state: 'off'
     - condition: state
-        entity_id: input_boolean.kjeller_lights_dimmed_auto
-        state: 'on'
+      entity_id: input_boolean.kjeller_lights_dimmed_auto
+      state: 'on'
   action:
   - service: light.turn_on
     data:
@@ -20,9 +20,9 @@
       brightness: 255
       kelvin: 2700
   - service: input_boolean.turn_on
-      entity_id: input_boolean.kjeller_lights_on_auto
+    entity_id: input_boolean.kjeller_lights_on_auto
   - service: input_boolean.turn_off
-      entity_id: input_boolean.kjeller_lights_dimmed_auto
+    entity_id: input_boolean.kjeller_lights_dimmed_auto
 
 - alias: "Kjellerlys, dimmet bevegelse"
   initial_state: True
@@ -39,8 +39,8 @@
       entity_id: light.kjeller
       state: 'on'
     - condition: state
-        entity_id: input_boolean.kjeller_lights_on_auto
-        state: 'on'
+      entity_id: input_boolean.kjeller_lights_on_auto
+      state: 'on'
   action:
   - service: light.turn_on
       data:
@@ -65,15 +65,15 @@
       entity_id: light.kjeller
       state: 'on'
     - condition: state
-        entity_id: input_boolean.kjeller_lights_on_auto
-        state: 'on'
+      entity_id: input_boolean.kjeller_lights_on_auto
+      state: 'on'
   action:
   - service: light.turn_off
     entity_id: light.kjeller
   - service: input_boolean.turn_off
-      entity_id: input_boolean.kjeller_lights_on_auto
+    entity_id: input_boolean.kjeller_lights_on_auto
   - service: input_boolean.turn_off
-      entity_id: input_boolean.kjeller_lights_dimmed_auto
+    entity_id: input_boolean.kjeller_lights_dimmed_auto
 
 - alias: "Kjellerlys skrudd av"
     initial_state: "on"

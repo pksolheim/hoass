@@ -27,8 +27,7 @@
   - service: light.turn_on
     data:
       entity_id: light.kjeller
-      brightness: 100
-      kelvin: 2700
+      brightness: 50
 
 - alias: Kjeller lys, av
   initial_state: True

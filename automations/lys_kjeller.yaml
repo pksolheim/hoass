@@ -15,7 +15,7 @@
       brightness: 255
       kelvin: 2700
 
-- alias: Kjeller lys, av
+- alias: Kjeller lys, dimme ned
   initial_state: True
   trigger:
     platform: state
@@ -23,6 +23,21 @@
     to: 'off'
     for:
       minutes: 10
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: light.kjeller
+      brightness: 100
+      kelvin: 2700
+
+- alias: Kjeller lys, av
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bevegelse_kjeller
+    to: 'off'
+    for:
+      minutes: 15
   action:
   - service: light.turn_off
     entity_id: light.kjeller

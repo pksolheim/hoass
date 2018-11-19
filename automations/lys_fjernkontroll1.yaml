@@ -86,4 +86,4 @@
     data_template:
       entity_id: light.pyntelampe
       data_template:
-        color_name: "{{ states.input_select.pyntelampe_color | string }}"
+        color_name: "{{ input_select.pyntelampe_color.state | string }}"

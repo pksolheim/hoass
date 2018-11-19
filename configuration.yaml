@@ -108,3 +108,10 @@ history_graph:
     - sensor.temperatur_ute
     - sensor.temperatur_stue
     - sensor.temperatur_kjeller
+
+#Logger level with debug
+logger:
+  default: info
+  logs:
+    pydeconz: debug
+    homeassistant.components.deconz: debug

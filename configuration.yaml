@@ -98,6 +98,7 @@ deconz:
 binary_sensor: !include_dir_merge_list input/binary_sensors/
 input_number: !include_dir_merge_named input/input_numbers/
 input_boolean: !include_dir_merge_named input/input_booleans/
+input_select: !include_dir_merge_named input/input_selects/
 
 history_graph:
   temperature_outside:

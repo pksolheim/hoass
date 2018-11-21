@@ -1,0 +1,30 @@
+- alias: "Varsel lys offline"
+  initial_state: true
+  trigger:
+  - platform: state
+    entity_id:
+    - light.gu10
+    - light.gang2
+    - light.gang3
+    - light.gang4
+    - light.gang5
+    - light.gangoppe1
+    - light.gangoppe2
+    - light.lampekjeller
+    - light.pyntelampe
+    - light.sofa1
+    - light.sofa3
+    - light.sofa2
+    - light.spisebord
+    - light.ute
+    - light.ute1
+    - light.ute2
+    - light.ute3
+    to: 'unavailable'
+    for:
+      seconds: 60
+  action:
+    service: notify.pk
+    data_template:
+      title: "Lys er offline"
+      message: "{{ trigger.to_state.attributes.friendly_name }} er offline"

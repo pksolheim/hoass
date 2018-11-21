@@ -1,0 +1,11 @@
+- alias: "Ekstratelfonen er av varsel"
+  trigger:
+    platform: state
+    entity_id: device_tracker.ekstratelefonen
+    from: 'home'
+    to: 'not_home'
+  action:
+    service: notify.pk
+    data_template:
+      title: "Ekstratelefonen er ikke på"
+      message: "Ekstratelefonen er ikke på nettet!"

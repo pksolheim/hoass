@@ -1,7 +1,7 @@
 - alias: "Ekstratelfonen er av varsel"
   trigger:
     platform: state
-    entity_id: device_tracker.ekstratelefonen
+    entity_id: device_tracker.ekstratelefone
     from: 'home'
     to: 'not_home'
   action:

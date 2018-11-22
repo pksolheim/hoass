@@ -19,21 +19,6 @@
   - light.sofa1
   - light.sofa2
   - light.sofa3
-  name: Fluxer mired
-  start_time: '6:00'
-  stop_time: '23:00'
-  start_colortemp: 4000
-  sunset_colortemp: 3000
-  stop_colortemp: 1900
-  brightness: 200
-  disable_brightness_adjust: True
-  mode: mired
-  transition: 30
-  interval: 60
-
-- platform: flux
-  lights:
-  - light.spisebord
   name: Fluxer xy
   start_time: '6:00'
   stop_time: '23:00'
@@ -43,5 +28,20 @@
   brightness: 200
   disable_brightness_adjust: True
   mode: xy
+  transition: 30
+  interval: 60
+
+- platform: flux
+  lights:
+  - light.spisebord
+  name: Fluxer mired
+  start_time: '6:00'
+  stop_time: '23:00'
+  start_colortemp: 4000
+  sunset_colortemp: 3000
+  stop_colortemp: 1900
+  brightness: 200
+  disable_brightness_adjust: True
+  mode: mired
   transition: 30
   interval: 60

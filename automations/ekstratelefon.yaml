@@ -2,8 +2,6 @@
   trigger:
     platform: state
     entity_id: device_tracker.ekstratelefon
-    from: 'home'
-    to: 'not_home'
   action:
     service: notify.pk
     data_template:

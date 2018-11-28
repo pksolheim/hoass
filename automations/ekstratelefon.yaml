@@ -7,5 +7,5 @@
   action:
     service: notify.pk
     data_template:
-      title: "Ekstratelefonen er ikke på"
-      message: "Ekstratelefonen er ikke på nettet!"
+      title: "Ekstratelefonen er {% if is_state('device_tracker.ekstratelefon', 'not_home') %}IKKE{% endif %} på nettet!"
+      message: "Ekstratelefonen er {% if is_state('device_tracker.ekstratelefon', 'not_home') %}IKKE{% endif %} på nettet!"

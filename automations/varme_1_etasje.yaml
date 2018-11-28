@@ -74,6 +74,25 @@
       entity_id: climate.stue_varme
       temperature: "{{ states.input_number.stue_dagtid_temperatur.state | float }}"
 
+- alias: Varme 1 Etasje ettermiddag ukedag varmup
+  trigger:
+  - platform: time
+    at: "12:00:00"
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.workday_today
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.ferie_modus
+      state: 'off'
+  action:
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.stue_varme
+      temperature: "{{ states.input_number.stue_ettermiddag_varmup.state | float }}"
+
 - alias: Varme 1 Etasje ettermiddag ukedag
   trigger:
   - platform: time

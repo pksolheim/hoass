@@ -1,9 +1,7 @@
-- alias: DoorOpen
+- alias: DoorEndret
   trigger:
     platform: state
     entity_id: binary_sensor.door_open
-    from: 'off'
-    to: 'on'
   condition:
     condition: and
     conditions:
@@ -18,25 +16,3 @@
     data_template:
       title: "Dør endret"
       message: "Døren er {% if is_state('sensor.sensative_strips_access_control', '22') %}åpen{% else %}lukket{% endif %}!"
-
-- alias: DoorClosed
-  trigger:
-    platform: state
-    entity_id: binary_sensor.door_open
-    from: 'on'
-    to: 'off'
-  condition:
-    condition: and
-    conditions:
-    - condition: state
-      entity_id: device_tracker.galaxys8
-      state: 'not_home'
-    - condition: state
-      entity_id: device_tracker.trine
-      state: 'not_home'
-  action:
-    service: notify.pk
-    data_template:
-      title: "Dør endret"
-      message: "Døren er {% if is_state('sensor.sensative_strips_access_control', '22') %}åpen{% else %}lukket{% endif %}!"
-

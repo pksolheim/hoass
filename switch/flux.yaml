@@ -15,7 +15,6 @@
 #  interval: 60
 
 - platform: flux
-  initial_state: True
   lights:
   - light.sofa1
   - light.sofa2
@@ -33,7 +32,6 @@
   interval: 60
 
 - platform: flux
-  initial_state: True
   lights:
   - light.spisebord
   name: Fluxer mired

@@ -133,6 +133,8 @@
       entity_id: climate.stue_varme
       temperature: "{{ states.input_number.stue_ettermiddag_temperatur.state | float }}"
 
+#TODO: reagrere på endring i temperaturene.
+
 - alias: 1 Etasje hjemmekontor PÅ
   trigger:
   - platform: state

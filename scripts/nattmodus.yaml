@@ -1,0 +1,44 @@
+nattmodus_toggle:
+  alias: Nattmodus av/pp
+  sequence:
+  - service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if states.input_boolean.nattmodus_oppe.state == 'off' %}
+          script.nattmodus_oppe_pa
+        {% else %}
+          script.nattmodus_oppe_av
+        {% endif %}
+
+nattmodus_oppe_pa:
+  alias: Nattmodus oppe på
+  sequence:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.nattmodus_oppe
+  - service: light.turn_off
+    entity_id: light.stue1
+  - service: light.turn_off
+    entity_id: light.stue2
+  - service: light.turn_on
+    entity_id: light.stue3
+    data:
+      entity_id: light.stue3
+      brightness: 12
+
+nattmodus_oppe_av:
+  alias: Nattmodus oppe av
+  sequence:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.nattmodus_oppe
+  - service: light.turn_on
+    data:
+      entity_id: light.stue1
+      brightness: 255
+  - service: light.turn_on
+    data:
+      entity_id: light.stue2
+      brightness: 255
+  - service: light.turn_on
+    data:
+      entity_id: light.stue3
+      brightness: 255

@@ -35,10 +35,14 @@ views:
     image: https://www.home-assistant.io/images/default-social.png
     entity: light.bed_light
 
-  - type: entity-button
-    name: nattmodus oppe
-    tap_action: call-service
-    service: script.nattmodus_toggle
+  - type: entities
+    title: Entities card sample
+    show_header_toggle: true
+    entities:
+    - type: entity-button
+      name: nattmodus
+      tap_action: call-service
+      service: script.nattmodus_toggle
 
   - type: entities
     title: Termostat

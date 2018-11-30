@@ -39,10 +39,16 @@ views:
     title: Entities card sample
     show_header_toggle: true
     entities:
-    - type: entity-button
-      name: nattmodus
-      tap_action: call-service
+    - type: call-service
+      icon: mdi:power
+      name: Bed light
+      action_name: Toggle light
       service: script.nattmodus_toggle
+    - type: divider
+    - type: weblink
+      name: Home Assistant
+      url: https://www.home-assistant.io/
+      icon: mdi:home-assistant
 
   - type: entities
     title: Termostat

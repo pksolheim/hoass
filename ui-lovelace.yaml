@@ -19,30 +19,15 @@ views:
   background: radial-gradient(crimson, skyblue)
   theme: dark-mode
   cards:
-  - type: entity-filter
-    entities:
-    - device_tracker.galaxys8
-    - device_tracker.trine
-    - device_tracker.ekstratelefonen
-    state_filter:
-    - 'home'
-    card:
-      type: glance
-      title: Hvem er hjemme
-      aspect_ratio: 75%
-
-  - type: picture-entity
-    image: https://www.home-assistant.io/images/default-social.png
-    entity: light.bed_light
 
   - type: entities
-    title: Entities card sample
+    title: Nattmodus
     show_header_toggle: true
     entities:
     - type: call-service
       icon: mdi:power
-      name: Bed light
-      action_name: Toggle light
+      name: Oppe
+      action_name: Velg
       service: script.nattmodus_toggle
     - type: divider
     - type: weblink
@@ -90,22 +75,17 @@ views:
     - climate.stue_varme
     - climate.kjeller_varme
   - type: history-graph
-    title: 'Siste 48 timer'
+    title: 'Temperatur'
     entities:
     - history_graph.temperatur_siste_48_timer
-
-- icon: mdi:settings
-  title: Innstillinger
-  cards:
-  - type: entities
-    title: Lovelace
-    entities:
-    - light.kitchen
 
 - title: Lys
   cards:
   - type: entities
-    title: Lovelace
+    title: Lys
     entities:
-    - light.kitchen
+    - light.stue
+    - light.gang
+    - light.pyntelampe
+    - light.sofa
 

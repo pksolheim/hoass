@@ -89,4 +89,13 @@ views:
     - light.pyntelampe
     - light.sofa
     - light.gangoppe
+  - type: entities
+    title: Julelys
+    entities:
+    - switch.ekstra_bryter
+  - type: entities
+    title: Fluxer
+    entities:
+    - switch.fluxer_mired
+    - switch.fluxer_xy
 

@@ -1,101 +1,111 @@
 title: The Solheim/Johanssons
 
 resources:
-- url: /local/my-custom-card.js
-  type: js
-- url: /local/my-webfont.css
-  type: css
+  - url: /local/my-custom-card.js
+    type: js
+  - url: /local/my-webfont.css
+    type: css
 
 # Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
 background: center / cover no-repeat url("/background.png") fixed
 # Exclude entities from "Unused entities" view
 excluded_entities:
-- weblink.router
+  - weblink.router
 views:
 
-- icon: mdi:home-assistant
-  title: Hoved
-  id: example
-  background: radial-gradient(crimson, skyblue)
-  theme: dark-mode
-  cards:
+  - icon: mdi:home-assistant
+    title: Hoved
+    id: example
+    background: radial-gradient(crimson, skyblue)
+    theme: dark-mode
+    cards:
 
-  - type: entities
-    title: Nattmodus
-    show_header_toggle: true
-    entities:
-    - type: call-service
-      icon: mdi:power
-      name: Oppe
-      action_name: Velg
-      service: script.nattmodus_toggle
-    - type: divider
-    - type: weblink
-      name: Home Assistant
-      url: https://www.home-assistant.io/
-      icon: mdi:home-assistant
+      - id: a7f59ab744984d7e932ebac9bd193565  # Automatically created id
+        type: entities
+        title: Nattmodus
+        show_header_toggle: true
+        entities:
+          - type: call-service
+            icon: mdi:power
+            name: Oppe
+            action_name: Velg
+            service: script.nattmodus_toggle
 
-  - type: entities
-    title: Termostat
-    entities:
-    - climate.stue_varme
-    - climate.kjeller_varme
 
-- title: Varme
-  cards:
-  - type: entities
-    title: Første etasje varme
-    show_header_toggle: false
-    entities:
-    - entity: group.stue_varme
-      name: Alle
-    - switch.varme1_stue
-    - switch.varme2_stue
-    - switch.varme_kjokken
-  - type: entities
-    title: Temperaturer
-    show_header_toggle: false
-    entities:
-    - input_number.ferie_temperatur
-    - input_number.kjeller_hjemmekontor_temperatur
-    - input_number.kjeller_normal_temperatur
-    - input_number.stue_morgen_temperatur
-    - input_number.stue_dagtid_temperatur
-    - input_number.stue_ettermiddag_temperatur
-    - input_number.stue_natt_temperatur
-  - type: entities
-    title: Moduser
-    show_header_toggle: false
-    entities:
-    - input_boolean.ferie_modus
-    - input_boolean.hjemmekontor_modus
-  - type: entities
-    title: Termostat
-    entities:
-    - climate.stue_varme
-    - climate.kjeller_varme
-  - type: history-graph
-    title: 'Temperatur'
-    entities:
-    - history_graph.temperatur_siste_48_timer
+      - id: 281b7b00e9574e69a9e9feb70b8817e4  # Automatically created id
+        type: entities
+        title: Termostat
+        entities:
+          - climate.stue_varme
+          - climate.kjeller_varme
 
-- title: Lys
-  cards:
-  - type: entities
+  - id: 1  # Automatically created id
+    title: Varme
+    cards:
+      - id: 384c78b1086e42a19aa94c8a4462a831  # Automatically created id
+        type: entities
+        title: Første etasje varme
+        show_header_toggle: false
+        entities:
+          - entity: group.stue_varme
+            name: Alle
+          - switch.varme1_stue
+          - switch.varme2_stue
+          - switch.varme_kjokken
+      - id: f6e839943f1547318201d5662918dda4  # Automatically created id
+        type: entities
+        title: Temperaturer
+        show_header_toggle: false
+        entities:
+          - input_number.ferie_temperatur
+          - input_number.kjeller_hjemmekontor_temperatur
+          - input_number.kjeller_normal_temperatur
+          - input_number.stue_morgen_temperatur
+          - input_number.stue_dagtid_temperatur
+          - input_number.stue_ettermiddag_temperatur
+          - input_number.stue_natt_temperatur
+      - id: 617c58edfd624d3e8a1e7f6630a5a3e5  # Automatically created id
+        type: entities
+        title: Moduser
+        show_header_toggle: false
+        entities:
+          - input_boolean.ferie_modus
+          - input_boolean.hjemmekontor_modus
+      - id: 19a6c5c3ab684161ab39eea0175b12a1  # Automatically created id
+        type: entities
+        title: Termostat
+        entities:
+          - climate.stue_varme
+          - climate.kjeller_varme
+      - id: 2fa95147aa4c4852bc467458736293af  # Automatically created id
+        type: history-graph
+        title: 'Temperatur'
+        entities:
+          - history_graph.temperatur_siste_48_timer
+
+  - id: 2  # Automatically created id
     title: Lys
-    entities:
-    - light.stue
-    - light.gang
-    - light.pyntelampe
-    - light.sofa
-    - light.gangoppe
-  - type: entities
-    title: Julelys
-    entities:
-    - switch.ekstra_bryter
-  - type: entities
-    title: Fluxer
-    entities:
-    - switch.fluxer_mired
-    - switch.fluxer_xy
-
+    cards:
+      - type: entities
+        id: 47a400f2d8844a0ea66610bb82809ac7  # Automatically created id
+        title: Lys
+        entities:
+          - light.stue
+          - light.gang
+          - light.pyntelampe
+          - light.sofa
+          - light.gangoppe
+        show_header_toggle: false
+      - type: entities
+        id: 8a2947ff2ece48b48696eada13224513  # Automatically created id
+        title: Julelys
+        entities:
+          - switch.ekstra_bryter
+        show_header_toggle: false
+      - type: entities
+        id: d7967c563d2146fb989a336122431190  # Automatically created id
+        title: Fluxer
+        entities:
+          - switch.fluxer_mired
+          - switch.fluxer_xy
+        show_header_toggle: false

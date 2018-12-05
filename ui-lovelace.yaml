@@ -32,17 +32,20 @@ views:
             service: script.nattmodus_toggle
 
       - id: 281b7b00e9574e69a9e9feb70b8817e4  # Automatically created id
-        type: entities
-        title: Termostat
-        entities:
-          - climate.stue_varme
-          - climate.kjeller_varme
-
-      - type: thermostat
+        type: thermostat
         entity: climate.stue_varme
 
       - type: thermostat
         entity: climate.kjeller_varme
+
+      - type: light
+        entity: light.stue
+
+      - type: light
+        entity: light.gang
+
+      - type: light
+        entity: light.gangoppe
 
   - id: 1  # Automatically created id
     title: Varme

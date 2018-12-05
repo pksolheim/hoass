@@ -9,3 +9,9 @@
     entity_id: light.stue
   - service: light.turn_on
     entity_id: light.gang
+
+
+##TODO
+# Akrtvere en nattmodus for førsteetasje
+# VEd bevegelse i nattmodus bare skru på lysene litt. (MEd mindre døra åpnes?)
+# Skru på gang-lyset om det er bevegelse i gangen (og allt lyset om et er bevegelse i stua?)

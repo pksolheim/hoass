@@ -41,6 +41,12 @@ views:
     - climate.stue_varme
     - climate.kjeller_varme
 
+  - type: thermostat
+    entity: climate.stue_varme
+
+  - type: thermostat
+    entity: climate.kjeller_varme
+
 - title: Varme
   cards:
   - type: entities

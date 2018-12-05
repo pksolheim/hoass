@@ -15,11 +15,10 @@ views:
 
   - icon: mdi:home-assistant
     title: Hoved
-    id: example
+    id: hoved
     background: radial-gradient(crimson, skyblue)
     theme: dark-mode
     cards:
-
       - id: a7f59ab744984d7e932ebac9bd193565  # Automatically created id
         type: entities
         title: Nattmodus
@@ -30,36 +29,23 @@ views:
             name: Oppe
             action_name: Velg
             service: script.nattmodus_toggle
-
-      - id: 281b7b00e9574e69a9e9feb70b8817e4  # Automatically created id
-        type: thermostat
-        entity: climate.stue_varme
-
-      - type: thermostat
-        entity: climate.kjeller_varme
-
       - type: light
         entity: light.stue
-
       - type: light
         entity: light.gang
-
       - type: light
         entity: light.gangoppe
 
-  - id: 1  # Automatically created id
-    title: Varme
+  - title: Varme
+    id: varme
+    background: radial-gradient(crimson, skyblue)
+    theme: dark-mode
     cards:
-      - id: 384c78b1086e42a19aa94c8a4462a831  # Automatically created id
-        type: entities
-        title: Første etasje varme
-        show_header_toggle: false
-        entities:
-          - entity: group.stue_varme
-            name: Alle
-          - switch.varme1_stue
-          - switch.varme2_stue
-          - switch.varme_kjokken
+      - id: 281b7b00e9574e69a9e9feb70b8817e4  # Automatically created id
+        type: thermostat
+        entity: climate.stue_varme
+      - type: thermostat
+        entity: climate.kjeller_varme
       - id: f6e839943f1547318201d5662918dda4  # Automatically created id
         type: entities
         title: Temperaturer
@@ -85,14 +71,11 @@ views:
         entities:
           - climate.stue_varme
           - climate.kjeller_varme
-      - id: 2fa95147aa4c4852bc467458736293af  # Automatically created id
-        type: history-graph
-        title: 'Temperatur'
-        entities:
-          - history_graph.temperatur_siste_48_timer
 
-  - id: 2  # Automatically created id
-    title: Lys
+  - title: Lys
+    id: lys
+    background: radial-gradient(crimson, skyblue)
+    theme: dark-mode
     cards:
       - type: entities
         id: 47a400f2d8844a0ea66610bb82809ac7  # Automatically created id

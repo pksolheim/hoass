@@ -1,43 +1,43 @@
-- alias: 'Halloween skifte farge'
-  trigger:
-    platform: time
-    seconds: /15
-  condition:
-    condition: and
-    conditions:
-    - condition: state
-      entity_id: light.pyntelampe
-      state: 'on'
-    - condition: state
-      entity_id: input_boolean.halloween_modus
-      state: 'on'
-  action:
-  - service: script.change_pyntelampe
-
-- alias: 'Halloween blinke lys'
-  trigger:
-    platform: state
-    entity_id: binary_sensor.door_open
-    from: 'off'
-    to: 'on'
-  condition:
-  - condition: state
-    entity_id: input_boolean.halloween_modus
-    state: 'on'
-  action:
-    service: script.turn_on
-    entity_id: script.light_flash
-
-- alias: 'Halloween blinke lys av'
-  trigger:
-    platform: state
-    entity_id: binary_sensor.door_open
-    from: 'on'
-    to: 'off'
-  condition:
-  - condition: state
-    entity_id: input_boolean.halloween_modus
-    state: 'on'
-  action:
-    service: script.turn_on
-    entity_id: script.light_flash_cancel
+#- alias: 'Halloween skifte farge'
+#  trigger:
+#    platform: time
+#    seconds: /15
+#  condition:
+#    condition: and
+#    conditions:
+#    - condition: state
+#      entity_id: light.pyntelampe
+#      state: 'on'
+#    - condition: state
+#      entity_id: input_boolean.halloween_modus
+#      state: 'on'
+#  action:
+#  - service: script.change_pyntelampe
+#
+#- alias: 'Halloween blinke lys'
+#  trigger:
+#    platform: state
+#    entity_id: binary_sensor.door_open
+#    from: 'off'
+#    to: 'on'
+#  condition:
+#  - condition: state
+#    entity_id: input_boolean.halloween_modus
+#    state: 'on'
+#  action:
+#    service: script.turn_on
+#    entity_id: script.light_flash
+#
+#- alias: 'Halloween blinke lys av'
+#  trigger:
+#    platform: state
+#    entity_id: binary_sensor.door_open
+#    from: 'on'
+#    to: 'off'
+#  condition:
+#  - condition: state
+#    entity_id: input_boolean.halloween_modus
+#    state: 'on'
+#  action:
+#    service: script.turn_on
+#    entity_id: script.light_flash_cancel

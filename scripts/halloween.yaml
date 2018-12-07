@@ -1,97 +1,97 @@
-change_pyntelampe:
-  alias: Change pyntelampe
-  sequence:
-  - service: script.preprocess_color
-    data:
-      id: light.pyntelampe
-
-preprocess_color:
-  sequence:
-  - service: script.set_color
-    data_template:
-      id: '{{ id }}'
-      colors: >-
-        {%- set h = (range(0, 360)|random)/360 %}
-        {%- set s = 1 %}
-        {%- set v = 1 %}
-
-        {%- set i = (h * 6)|int %}
-        {%- set f = h * 6 - i %}
-        {%- set p = v * (1 - s) %}
-        {%- set q = v * (1 - f * s) %}
-        {%- set t = v * (1 - (1 - f) * s) %}
-
-        {%- if i % 6 == 0 %}
-          {% set r = v %}
-          {% set g = t %}
-          {% set b = p %}
-        {%- elif i % 6 == 1 %}
-          {% set r = q %}
-          {% set g = v %}
-          {% set b = p %}
-        {%- elif i % 6 == 2 %}
-          {% set r = p %}
-          {% set g = v %}
-          {% set b = t %}
-        {%- elif i % 6 == 3 %}
-          {% set r = p %}
-          {% set g = q %}
-          {% set b = v %}
-        {%- elif i % 6 == 4 %}
-          {% set r = t %}
-          {% set g = p %}
-          {% set b = v %}
-        {%- elif i % 6 == 5 %}
-          {% set r = v %}
-          {% set g = p %}
-          {% set b = q %}
-        {%- endif %}
-
-        {{ (255*r)|round(0) }}, {{ (255*g)|round(0) }}, {{ (255*b)|round(0) }}, {{ (360*h)|int }}
-
-      transition: 5
-
-set_color:
-  sequence:
-  - service: light.turn_on
-    data_template:
-      entity_id: '{{ id }}'
-      rgb_color: [ "{{ colors.split(',')[0]|int }}", "{{ colors.split(',')[1]|int }}", "{{ colors.split(',')[2]|int }}" ]
-      transition: "{{ transition }}"
-
-
-light_flash:
-  alias: Light flash on
-  sequence:
-  - service: homeassistant.turn_on
-    data:
-      entity_id: light.gang
-  - delay:
-      seconds: 1
-  - service: homeassistant.turn_off
-    data:
-      entity_id: light.gang
-  - service: script.turn_on
-    data:
-      entity_id: script.light_loop
-
-light_loop:
-  alias: Light flash loop
-  sequence:
-  - delay:
-      seconds: 1
-  - service: script.turn_on
-    data:
-      entity_id: script.light_flash
-
-light_flash_cancel:
-  alias: Cancel Light Flash
-  sequence:
-  -  service: script.turn_off
-     data:
-       entity_id: script.light_flash
-  -  service: script.turn_off
-     data:
-       entity_id: script.light_loop
-  - service: light.turn_on
-    entity_id: light.gang
+#change_pyntelampe:
+#  alias: Change pyntelampe
+#  sequence:
+#  - service: script.preprocess_color
+#    data:
+#      id: light.pyntelampe
+#
+#preprocess_color:
+#  sequence:
+#  - service: script.set_color
+#    data_template:
+#      id: '{{ id }}'
+#      colors: >-
+#        {%- set h = (range(0, 360)|random)/360 %}
+#        {%- set s = 1 %}
+#        {%- set v = 1 %}
+#
+#        {%- set i = (h * 6)|int %}
+#        {%- set f = h * 6 - i %}
+#        {%- set p = v * (1 - s) %}
+#        {%- set q = v * (1 - f * s) %}
+#        {%- set t = v * (1 - (1 - f) * s) %}
+#
+#        {%- if i % 6 == 0 %}
+#          {% set r = v %}
+#          {% set g = t %}
+#          {% set b = p %}
+#        {%- elif i % 6 == 1 %}
+#          {% set r = q %}
+#          {% set g = v %}
+#          {% set b = p %}
+#        {%- elif i % 6 == 2 %}
+#          {% set r = p %}
+#          {% set g = v %}
+#          {% set b = t %}
+#        {%- elif i % 6 == 3 %}
+#          {% set r = p %}
+#          {% set g = q %}
+#          {% set b = v %}
+#        {%- elif i % 6 == 4 %}
+#          {% set r = t %}
+#          {% set g = p %}
+#          {% set b = v %}
+#        {%- elif i % 6 == 5 %}
+#          {% set r = v %}
+#          {% set g = p %}
+#          {% set b = q %}
+#        {%- endif %}
+#
+#        {{ (255*r)|round(0) }}, {{ (255*g)|round(0) }}, {{ (255*b)|round(0) }}, {{ (360*h)|int }}
+#
+#      transition: 5
+#
+#set_color:
+#  sequence:
+#  - service: light.turn_on
+#    data_template:
+#      entity_id: '{{ id }}'
+#      rgb_color: [ "{{ colors.split(',')[0]|int }}", "{{ colors.split(',')[1]|int }}", "{{ colors.split(',')[2]|int }}" ]
+#      transition: "{{ transition }}"
+#
+#
+#light_flash:
+#  alias: Light flash on
+#  sequence:
+#  - service: homeassistant.turn_on
+#    data:
+#      entity_id: light.gang
+#  - delay:
+#      seconds: 1
+#  - service: homeassistant.turn_off
+#    data:
+#      entity_id: light.gang
+#  - service: script.turn_on
+#    data:
+#      entity_id: script.light_loop
+#
+#light_loop:
+#  alias: Light flash loop
+#  sequence:
+#  - delay:
+#      seconds: 1
+#  - service: script.turn_on
+#    data:
+#      entity_id: script.light_flash
+#
+#light_flash_cancel:
+#  alias: Cancel Light Flash
+#  sequence:
+#  -  service: script.turn_off
+#     data:
+#       entity_id: script.light_flash
+#  -  service: script.turn_off
+#     data:
+#       entity_id: script.light_loop
+#  - service: light.turn_on
+#    entity_id: light.gang

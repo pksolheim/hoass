@@ -29,11 +29,14 @@ views:
             name: Oppe
             action_name: Velg
             service: script.nattmodus_toggle
-      - type: light
+      - id: ce21d66b8cdb426085b0063d97b0c98c  # Automatically created id
+        type: entity-button
         entity: light.stue
-      - type: light
+      - id: 932ec73ca9c44367bca7d511667cad36  # Automatically created id
+        type: entity-button
         entity: light.gang
-      - type: light
+      - id: 2a3b1b9b969246fc9a253e86ed18e271  # Automatically created id
+        type: entity-button
         entity: light.gangoppe
 
   - title: Varme
@@ -44,7 +47,8 @@ views:
       - id: 281b7b00e9574e69a9e9feb70b8817e4  # Automatically created id
         type: thermostat
         entity: climate.stue_varme
-      - type: thermostat
+      - id: 1a4247d49c0b4d529b7b5fe5e3a08e22  # Automatically created id
+        type: thermostat
         entity: climate.kjeller_varme
       - id: f6e839943f1547318201d5662918dda4  # Automatically created id
         type: entities

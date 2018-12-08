@@ -1,4 +1,4 @@
-nattmodus_toggle:
+nattmodus_oppe_toggle:
   alias: Nattmodus av/pp
   sequence:
   - service: script.turn_on

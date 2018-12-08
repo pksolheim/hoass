@@ -6,12 +6,112 @@
     to: 'on'
   action:
   - service: light.turn_on
-    entity_id: light.stue
+    data_template:
+      entity_id: light.stue
+      brightness: >
+        {% if states.input_boolean.nattmodus_hoved.state == 'off' %}
+          255
+        {% else %}
+          100
+        {% endif %}
   - service: light.turn_on
-    entity_id: light.gang
+    data_template:
+      entity_id: light.gang
+      brightness: >
+        {% if states.input_boolean.nattmodus_hoved.state == 'off' %}
+          255
+        {% else %}
+          100
+        {% endif %}
 
+- alias: Lys gang, på bevegelse
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bevegelse_gang
+    to: 'on'
+  action:
+  - service: light.turn_on
+    data_template:
+      entity_id: light.gang
+      brightness: >
+        {% if states.input_boolean.nattmodus_hoved.state == 'off' %}
+          255
+        {% else %}
+          100
+        {% endif %}
+
+- alias: Lys gang, på ytterdor
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: binary_sensor.door_open
+  action:
+  - service: light.turn_on
+      data_template:
+        entity_id: light.gang
+        brightness: 255
+
+- alias: Hovedetasje nattmodus av
+  initial_state: True
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.bevegelse_gang
+    to: 'on'
+  - platform: state
+      entity_id: binary_sensor.bevegelse_stue
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.nattmodus_hoved
+      state: 'on'
+    - condition: time
+      after: '06:00:00'
+  action:
+  - service: script.turn_on
+    entity_id:  script.nattmodus_hoved_pa
+
+- alias: Hovedetasje nattmodus dimmet av etter 5 min
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bevegelse_hoveetasje
+    to: 'off'
+    for:
+      minutes: 5
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.nattmodus_hoved
+      state: 'on'
+  action:
+  - service: light.turn_off
+    entity_id: light.kjeller
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.kjeller_lights_on_auto
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.kjeller_lights_dimmed_auto
+
+- alias: Lys gang, på bevegelse
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bevegelse_gang
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.nattmodus_hoved
+      state: 'on'
+  action:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.nattmodus_hoved_dimmet
 
 ##TODO
-# Akrtvere en nattmodus for førsteetasje
-# VEd bevegelse i nattmodus bare skru på lysene litt. (MEd mindre døra åpnes?)
-# Skru på gang-lyset om det er bevegelse i gangen (og allt lyset om et er bevegelse i stua?)
+# Da dempes lysene i de rommene hvor det er bevegelse (eller tven er på). Julelys etc slåes av.
+
+# Skru av nattmodus ved bevegelse etter klokka 06(hverdag/helg)

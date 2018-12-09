@@ -71,7 +71,7 @@
       after: '06:00:00'
   action:
   - service: script.turn_on
-    entity_id:  script.nattmodus_hoved_pa
+    entity_id:  script.nattmodus_hoved_av
 
 - alias: Hovedetasje nattmodus dimmet av etter 5 min
   initial_state: True

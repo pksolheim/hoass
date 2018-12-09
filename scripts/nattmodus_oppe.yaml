@@ -1,5 +1,5 @@
 nattmodus_oppe_toggle:
-  alias: Nattmodus av/pp
+  alias: Nattmodus oppe av/pp
   sequence:
   - service: script.turn_on
     data_template:

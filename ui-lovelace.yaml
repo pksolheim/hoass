@@ -26,9 +26,14 @@ views:
         entities:
           - type: call-service
             icon: mdi:power
-            name: Oppe
-            action_name: Velg
+            name: Nattmodus
+            action_name: Oppe
             service: script.nattmodus_oppe_toggle
+          - type: call-service
+            icon: mdi:power
+            name: Nattmodus
+            action_name: Nede
+            service: script.nattmodus_hoved_toggle
       - id: ce21d66b8cdb426085b0063d97b0c98c  # Automatically created id
         type: entity-button
         entity: light.stue

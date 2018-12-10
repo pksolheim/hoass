@@ -13,7 +13,7 @@
       entity_id:
       - binary_sensor.bevegelse_gang
       - binary_sensor.bevegelse_stue
-      value_template: >-
+      value_template: >
         {% if is_state('binary_sensor.bevegelse_gang', 'on')
            or is_state('binary_sensor.bevegelse_stue', 'on') %}
            on

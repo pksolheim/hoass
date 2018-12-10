@@ -17,9 +17,11 @@ nattmodus_hoved_pa:
     entity_id: input_boolean.nattmodus_hoved
   - service: switch.turn_off
     entity_id: switch.ekstra_bryter
-  - service: light.turn_off
-    entity_id: light.stue
-  - service: light.turn_off
+  - service: light.turn_on
+    data:
+      entity_id: light.stue
+      brightness: 12
+  - service: light.turn_on
     data:
       entity_id: light.gang
       brightness: 12

@@ -38,7 +38,7 @@
         {% if states.input_boolean.nattmodus_hoved.state == 'off' %}
           255
         {% else %}
-          100
+          12
         {% endif %}
 
 - alias: Lys gang, på ytterdor

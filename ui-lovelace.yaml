@@ -44,16 +44,14 @@ views:
         type: entity-button
         entity: light.gangoppe
       - id: a7f59ab744984d7e932ebac9bd193565  # Automatically created id
-        type: vertical-stack
-          cards:
-          - type: glance
-            entities:
-            - sun.sun
-            - sensor.yr_symbol
-            - sensor.temperatur_gang
-            - sensor.temperatur_stue
-            - sensor.temperatur_kjeller
-            - sensor.temperatur_ute
+        type: glance
+        entities:
+        - sun.sun
+        - sensor.yr_symbol
+        - sensor.temperatur_gang
+        - sensor.temperatur_stue
+        - sensor.temperatur_kjeller
+        - sensor.temperatur_ute
 
   - title: Varme
     id: varme

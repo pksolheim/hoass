@@ -43,8 +43,7 @@ views:
       - id: 2a3b1b9b969246fc9a253e86ed18e271  # Automatically created id
         type: entity-button
         entity: light.gangoppe
-      - id: a7f59ab744984d7e932ebac9bd193565  # Automatically created id
-        type: glance
+      - type: glance
         entities:
         - sun.sun
         - sensor.yr_symbol

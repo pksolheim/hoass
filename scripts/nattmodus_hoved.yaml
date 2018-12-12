@@ -31,6 +31,8 @@ nattmodus_hoved_av:
   sequence:
   - service: input_boolean.turn_off
     entity_id: input_boolean.nattmodus_hoved
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.nattmodus_hoved_dimmet
   - service: switch.turn_on
     entity_id: switch.ekstra_bryter
   - service: light.turn_on

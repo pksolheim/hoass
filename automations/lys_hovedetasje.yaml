@@ -85,6 +85,9 @@
     - condition: state
       entity_id: input_boolean.nattmodus_hoved
       state: 'on'
+    - condition: state
+      entity_id: input_boolean.nattmodus_hoved_dimmet
+      state: 'on'
   action:
   - service: light.turn_off
     entity_id: light.stue

@@ -92,7 +92,8 @@ climate: !include climate/climate.yaml
 
 
 deconz:
-  host: 192.168.1.200
+  host: 192.168.1.201
+  port: 8080
 
 #camera:
 #- platform: push

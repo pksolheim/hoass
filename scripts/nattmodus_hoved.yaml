@@ -19,6 +19,8 @@ nattmodus_hoved_pa:
     entity_id: input_boolean.nattmodus_hoved_dimmet
   - service: switch.turn_off
     entity_id: switch.ekstra_bryter
+  - service: switch.turn_off
+    entity_id: switch.ekstra_bryter_2
   - service: light.turn_on
     data:
       entity_id: light.stue
@@ -37,6 +39,8 @@ nattmodus_hoved_av:
     entity_id: input_boolean.nattmodus_hoved_dimmet
   - service: switch.turn_on
     entity_id: switch.ekstra_bryter
+  - service: switch.turn_on
+    entity_id: switch.ekstra_bryter_2
   - service: light.turn_on
     data:
       entity_id: light.stue

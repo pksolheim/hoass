@@ -109,6 +109,7 @@ views:
         title: Julelys
         entities:
           - switch.ekstra_bryter
+          - switch.ekstra_bryter_2
         show_header_toggle: false
       - type: entities
         id: d7967c563d2146fb989a336122431190  # Automatically created id

@@ -39,38 +39,38 @@ nattmodus_oppe_pa:
       brightness: 100
   - delay:
       seconds: 5
-  - service: light.turn_on
-    data:
-      entity_id:
-      - light.nattlys_isabell
-      - light.nattlys_aleksander
-      brightness: 90
-  - delay:
-      seconds: 5
-  - service: light.turn_on
-    data:
-      entity_id:
-      - light.nattlys_isabell
-      - light.nattlys_aleksander
-      brightness: 80
-  - delay:
-      seconds: 5
-  - service: light.turn_on
-    data:
-      entity_id:
-      - light.nattlys_isabell
-      - light.nattlys_aleksander
-      brightness: 70
-  - delay:
-      seconds: 5
-  - service: light.turn_on
-    data:
-      entity_id:
-      - light.nattlys_isabell
-      - light.nattlys_aleksander
-      brightness: 60
-  - delay:
-      seconds: 5
+#  - service: light.turn_on
+#    data:
+#      entity_id:
+#      - light.nattlys_isabell
+#      - light.nattlys_aleksander
+#      brightness: 90
+#  - delay:
+#      seconds: 5
+#  - service: light.turn_on
+#    data:
+#      entity_id:
+#      - light.nattlys_isabell
+#      - light.nattlys_aleksander
+#      brightness: 80
+#  - delay:
+#      seconds: 5
+#  - service: light.turn_on
+#    data:
+#      entity_id:
+#      - light.nattlys_isabell
+#      - light.nattlys_aleksander
+#      brightness: 70
+#  - delay:
+#      seconds: 5
+#  - service: light.turn_on
+#    data:
+#      entity_id:
+#      - light.nattlys_isabell
+#      - light.nattlys_aleksander
+#      brightness: 60
+#  - delay:
+#      seconds: 5
   - service: light.turn_on
     data:
       entity_id:

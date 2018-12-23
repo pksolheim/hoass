@@ -14,12 +14,12 @@
   - service: light.turn_on
     data:
       entity_id: light.nattlys_isabell
-      brightness: 20
+      brightness: 5
       rgb_color: [255,255,153]
   - service: light.turn_on
     data:
       entity_id: light.nattlys_aleksander
-      brightness: 20
+      brightness: 5
       rgb_color: [255,255,153]
 
 - alias: nattlys av helg
@@ -38,10 +38,10 @@
   - service: light.turn_on
     data:
       entity_id: light.nattlys_isabell
-      brightness: 20
+      brightness: 5
       rgb_color: [255,255,153]
   - service: light.turn_on
     data:
       entity_id: light.nattlys_aleksander
-      brightness: 20
+      brightness: 5
       rgb_color: [255,255,153]

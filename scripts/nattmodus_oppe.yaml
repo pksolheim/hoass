@@ -22,12 +22,6 @@ nattmodus_oppe_pa:
       entity_id: light.gangoppe2
       brightness: 12
   - service: light.turn_on
-    entity_id:
-    - light.nattlys_isabell
-    - light.nattlys_aleksander
-    data:
-      brightness: 1
-  - service: light.turn_on
     data:
       entity_id: light.nattlys_isabell
       rgb_color: [204,0,102]
@@ -35,6 +29,12 @@ nattmodus_oppe_pa:
     data:
       entity_id: light.nattlys_aleksander
       rgb_color: [0,0,153]
+  - service: light.turn_on
+    data:
+      entity_id:
+      - light.nattlys_isabell
+      - light.nattlys_aleksander
+      brightness: 1
 
 nattmodus_oppe_av:
   alias: Nattmodus oppe av

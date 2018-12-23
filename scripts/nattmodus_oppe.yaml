@@ -69,8 +69,8 @@ nattmodus_oppe_pa:
 #      - light.nattlys_isabell
 #      - light.nattlys_aleksander
 #      brightness: 10
-#  - delay:
-#      seconds: 5
+  - delay:
+      seconds: 2
   - service: light.turn_on
     data:
       entity_id:

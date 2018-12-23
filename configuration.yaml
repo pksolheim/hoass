@@ -108,12 +108,12 @@ input_select: !include_dir_merge_named input/input_selects/
 
 history_graph:
   temperature_outside:
-    name: 'Temperatur siste 48 timer'
-    hours_to_show: 48
+    name: 'Temperatur siste 24 timer'
+    hours_to_show: 24
     refresh: 120
     entities:
-    - sensor.temperatur_ute
-    - sensor.temperatur_stue
+#    - sensor.temperatur_ute
+    - sensor.temperatur_gang
     - sensor.temperatur_kjeller
 
 #Logger level with debug

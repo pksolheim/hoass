@@ -29,16 +29,16 @@ nattmodus_oppe_pa:
     data:
       entity_id: light.nattlys_aleksander
       rgb_color: [0,0,153]
-  - delay:
-      seconds: 5
-  - service: light.turn_on
-    data:
-      entity_id:
-      - light.nattlys_isabell
-      - light.nattlys_aleksander
-      brightness: 100
-  - delay:
-      seconds: 5
+#  - delay:
+#      seconds: 5
+#  - service: light.turn_on
+#    data:
+#      entity_id:
+#      - light.nattlys_isabell
+#      - light.nattlys_aleksander
+#      brightness: 100
+#  - delay:
+#      seconds: 5
 #  - service: light.turn_on
 #    data:
 #      entity_id:
@@ -68,15 +68,16 @@ nattmodus_oppe_pa:
 #      entity_id:
 #      - light.nattlys_isabell
 #      - light.nattlys_aleksander
-#      brightness: 60
-#  - delay:
-#      seconds: 5
+#      brightness: 10
+  - delay:
+      seconds: 5
   - service: light.turn_on
     data:
       entity_id:
       - light.nattlys_isabell
       - light.nattlys_aleksander
       brightness: 1
+      transition: 10
 
 nattmodus_oppe_av:
   alias: Nattmodus oppe av

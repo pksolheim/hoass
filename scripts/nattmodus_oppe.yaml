@@ -24,13 +24,13 @@ nattmodus_oppe_pa:
   - service: light.turn_on
     data:
       entity_id: light.nattlys_isabell
-      brightness: 1
-      rgb_color: [255,51,153]
+      brightness: 2
+      rgb_color: [204,0,102]
   - service: light.turn_on
     data:
       entity_id: light.nattlys_aleksander
-      brightness: 1
-      rgb_color: [102,102,255]
+      brightness: 2
+      rgb_color: [0,0,153]
 
 nattmodus_oppe_av:
   alias: Nattmodus oppe av

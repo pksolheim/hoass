@@ -29,46 +29,6 @@ nattmodus_oppe_pa:
     data:
       entity_id: light.nattlys_aleksander
       rgb_color: [0,0,153]
-#  - delay:
-#      seconds: 5
-#  - service: light.turn_on
-#    data:
-#      entity_id:
-#      - light.nattlys_isabell
-#      - light.nattlys_aleksander
-#      brightness: 100
-#  - delay:
-#      seconds: 5
-#  - service: light.turn_on
-#    data:
-#      entity_id:
-#      - light.nattlys_isabell
-#      - light.nattlys_aleksander
-#      brightness: 90
-#  - delay:
-#      seconds: 5
-#  - service: light.turn_on
-#    data:
-#      entity_id:
-#      - light.nattlys_isabell
-#      - light.nattlys_aleksander
-#      brightness: 80
-#  - delay:
-#      seconds: 5
-#  - service: light.turn_on
-#    data:
-#      entity_id:
-#      - light.nattlys_isabell
-#      - light.nattlys_aleksander
-#      brightness: 70
-#  - delay:
-#      seconds: 5
-#  - service: light.turn_on
-#    data:
-#      entity_id:
-#      - light.nattlys_isabell
-#      - light.nattlys_aleksander
-#      brightness: 10
   - delay:
       seconds: 2
   - service: light.turn_on

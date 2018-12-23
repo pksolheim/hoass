@@ -38,7 +38,7 @@ nattmodus_oppe_pa:
       - light.nattlys_aleksander
       brightness: 100
   - delay:
-    seconds: 5
+      seconds: 5
   - service: light.turn_on
     data:
       entity_id:
@@ -54,7 +54,7 @@ nattmodus_oppe_pa:
       - light.nattlys_aleksander
       brightness: 80
   - delay:
-    seconds: 5
+      seconds: 5
   - service: light.turn_on
     data:
       entity_id:
@@ -62,7 +62,7 @@ nattmodus_oppe_pa:
       - light.nattlys_aleksander
       brightness: 70
   - delay:
-    seconds: 5
+      seconds: 5
   - service: light.turn_on
     data:
       entity_id:

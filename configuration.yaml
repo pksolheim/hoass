@@ -112,7 +112,7 @@ history_graph:
     hours_to_show: 24
     refresh: 120
     entities:
-#    - sensor.temperatur_ute
+    - sensor.temperatur_ute
     - sensor.temperatur_gang
     - sensor.temperatur_kjeller
 

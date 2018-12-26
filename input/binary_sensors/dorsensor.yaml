@@ -2,5 +2,12 @@
   sensors:
     door_open:
       friendly_name: "Dørsensor"
-      device_class: opening
+      device_class: door
       value_template: "{{ is_state('sensor.sensative_strips_access_control', '22') }}"
+
+- platform: template
+  sensors:
+    garage_open:
+      friendly_name: "Garasjedør"
+      device_class: garage_door
+      value_template: "{{ is_state('sensor.aeotec_zw120_door_window_sensor_gen5_access_control', '22') }}"

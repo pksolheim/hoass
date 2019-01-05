@@ -4,6 +4,12 @@
     platform: state
     entity_id: binary_sensor.bevegelse_stue
     to: 'on'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: light.stue
+      state: 'off'
   action:
   - service: light.turn_on
     data_template:

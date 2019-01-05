@@ -71,6 +71,11 @@ sensor:
     display_options:
       - 'time'
       - 'date'
+  - platform: entur_public_transport
+    stop_ids:
+    - 'NSR:StopPlace:58249'
+
+
 
 # Text to speech
 tts:

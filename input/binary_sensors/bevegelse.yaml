@@ -22,11 +22,11 @@
       entity_id:
       - binary_sensor.bevegelse_gang
       - binary_sensor.bevegelse_stue
-      - device_tracker.lgwebostv
+      - device_tracker.stuetv
       value_template: >-
         {% if is_state('binary_sensor.bevegelse_gang', 'on')
            or is_state('binary_sensor.bevegelse_stue', 'on')
-          or is_state('device_tracker.lgwebostv', 'home')
+          or is_state('device_tracker.stuetv', 'home')
            %}
            true
         {% else %}

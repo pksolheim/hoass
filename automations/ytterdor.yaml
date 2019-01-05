@@ -6,7 +6,7 @@
     condition: and
     conditions:
     - condition: state
-      entity_id: device_tracker.galaxys8
+      entity_id: device_tracker.pk
       state: 'not_home'
     - condition: state
       entity_id: device_tracker.trine

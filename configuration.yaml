@@ -87,6 +87,7 @@ cloud:
 media_player:
 - platform: webostv
   name: TV Stue
+  host: 192.168.1.107
 
 # Z-Wave support
 zwave:

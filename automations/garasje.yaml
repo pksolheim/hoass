@@ -1,0 +1,13 @@
+- alias: "Garasjen er apen"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_open
+  action:
+    - service: notify.pk
+      data_template:
+        title: "Garasjen er {% if is_state('binary_sensor.garage_open', 'off') %}IKKE{% endif %} åpen!"
+        message: "Garasjen er {% if is_state('binary_sensor.garage_open', 'off') %}IKKE{% endif %} åpen!"
+    - service: notify.tv
+      data_template:
+        title: "Garasjen er {% if is_state('binary_sensor.garage_open', 'off') %}IKKE{% endif %} åpen!"
+        message: "Garasjen er {% if is_state('binary_sensor.garage_open', 'off') %}IKKE{% endif %} åpen!"

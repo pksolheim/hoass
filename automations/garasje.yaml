@@ -21,10 +21,10 @@
   initial_state: True
   trigger:
   - platform: time
-    at: '22:10:00'
+    at: '22:15:00'
   condition: state
-    entity_id: binary_sensor.garage_open
-    state: 'on'
+  entity_id: binary_sensor.garage_open
+  state: 'on'
   action:
     - service: notify.pk
       data_template:

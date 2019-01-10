@@ -21,8 +21,8 @@
   initial_state: True
   trigger:
   - platform: time
-    at: '22:05:00'
-  condition:
+    at: '22:10:00'
+  condition: state
     entity_id: binary_sensor.garage_open
     state: 'on'
   action:

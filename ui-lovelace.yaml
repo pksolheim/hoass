@@ -112,6 +112,8 @@ background: center / cover no-repeat url("/background.png") fixed
         - light.pyntelampe
         - light.sofa
         - light.gangoppe
+        - nattlys_isabell
+        - nattlys_aleksander
         id: 47a400f2d8844a0ea66610bb82809ac7
         show_header_toggle: false
         title: Lys

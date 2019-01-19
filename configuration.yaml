@@ -139,5 +139,6 @@ history_graph:
 logger:
   default: info
   logs:
-    pydeconz: debug
-    homeassistant.components.deconz: debug
+    pydeconz: info
+    homeassistant.components.deconz: info
+    homeassistant.components.device_tracker.nmap_tracker: critical

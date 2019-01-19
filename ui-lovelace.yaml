@@ -1,137 +1,231 @@
-title: The Solheim/Johanssons
-
-resources:
-  - url: /local/my-custom-card.js
-    type: js
-  - url: /local/my-webfont.css
-    type: css
-
-# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
 background: center / cover no-repeat url("/background.png") fixed
-    excluded_entities:
-    - weblink.router
-    resources:
-    - type: js
-      url: Edit Config
-    /local/my-custom-card.js
-    - type: css
-      url: /local/my-webfont.css
-    title: The Solheim/Johanssons
-    views:
-    - background: 'radial-gradient(crimson, skyblue)'
+excluded_entities:
+- weblink.router
+resources:
+- type: js
+  url: /local/my-custom-card.js
+- type: css
+  url: /local/my-webfont.css
+title: The Solheim/Johanssons
+views:
+- background: 'radial-gradient(crimson, skyblue)'
+  cards:
+  - entity: input_boolean.nattmodus_hoved
+    state_image:
+      'off': /local/images/wake.svg
+      'on': /local/images/sleep.svg
+    tap_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: script.nattmodus_hoved_toggle
+    type: picture-entity
+  - entity: input_boolean.nattmodus_oppe
+    name: Nattmodus oppe
+    state_image:
+      'off': /local/images/wake.svg
+      'on': /local/images/sleep.svg
+    tap_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: script.nattmodus_oppe_toggle
+    type: picture-entity
+  - entity: binary_sensor.garage_open
+    name: Garasjedør
+    state_image:
+      'off': /local/images/garage_closed.svg
+      'on': /local/images/garage_open.svg
+    type: picture-entity
+  - entity: light.stue
+    id: ce21d66b8cdb426085b0063d97b0c98c
+    type: entity-button
+  - entity: light.gang
+    id: 932ec73ca9c44367bca7d511667cad36
+    type: entity-button
+  - entity: light.gangoppe
+    id: 2a3b1b9b969246fc9a253e86ed18e271
+    type: entity-button
+  - entities:
+    - sun.sun
+    - sensor.yr_symbol
+    - sensor.temperatur_gang
+    - sensor.temperatur_stue
+    - sensor.temperatur_kjeller
+    - sensor.temperatur_ute
+    type: glance
+  icon: 'mdi:home-assistant'
+  id: hoved
+  theme: dark-mode
+  title: Hoved
+- background: 'radial-gradient(crimson, skyblue)'
+  cards:
+  - entity: climate.stue_varme
+    id: 281b7b00e9574e69a9e9feb70b8817e4
+    type: thermostat
+  - entity: climate.kjeller_varme
+    id: 1a4247d49c0b4d529b7b5fe5e3a08e22
+    type: thermostat
+  - entities:
+    - input_number.ferie_temperatur
+    - input_number.kjeller_hjemmekontor_temperatur
+    - input_number.kjeller_normal_temperatur
+    - input_number.stue_morgen_temperatur
+    - input_number.stue_dagtid_temperatur
+    - input_number.stue_ettermiddag_temperatur
+    - input_number.stue_natt_temperatur
+    id: f6e839943f1547318201d5662918dda4
+    show_header_toggle: false
+    title: Temperaturer
+    type: entities
+  - entities:
+    - input_boolean.ferie_modus
+    - input_boolean.hjemmekontor_modus
+    id: 617c58edfd624d3e8a1e7f6630a5a3e5
+    show_header_toggle: false
+    title: Moduser
+    type: entities
+  - entities:
+    - climate.stue_varme
+    - climate.kjeller_varme
+    id: 19a6c5c3ab684161ab39eea0175b12a1
+    title: Termostat
+    type: entities
+  id: varme
+  theme: dark-mode
+  title: Varme
+- background: 'radial-gradient(crimson, skyblue)'
+  cards:
+  - entities:
+    - light.stue
+    - light.gang
+    - light.pyntelampe
+    - light.sofa
+    - light.gangoppe
+    - light.nattlys_isabell
+    - light.nattlys_aleksander
+    id: 47a400f2d8844a0ea66610bb82809ac7
+    show_header_toggle: false
+    title: Lys
+    type: entities
+  - entities:
+    - switch.ekstra_bryter
+    - switch.ekstra_bryter_2
+    id: 8a2947ff2ece48b48696eada13224513
+    show_header_toggle: false
+    title: Julelys
+    type: entities
+  - entities:
+    - switch.fluxer_mired
+    - switch.fluxer_xy
+    id: d7967c563d2146fb989a336122431190
+    show_header_toggle: false
+    title: Fluxer
+    type: entities
+  id: lys
+  theme: dark-mode
+  title: Lys
+- background: 'radial-gradient(crimson, skyblue)'
+  cards:
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
       cards:
-      - entity: input_boolean.nattmodus_hoved
-        state_image:
-            'off': /local/images/wake.svg
-            'on': /local/images/sleep.svg
-        type: picture-entity
-        tap_action:
-            action: call-service
-            service: script.turn_on
-            service_data:
-                entity_id: script.nattmodus_hoved_toggle
-      - name: Nattmodus oppe
+      - type: picture-entity
         entity: input_boolean.nattmodus_oppe
+        name: Nattmodus oppe
         state_image:
-            'off': /local/images/wake.svg
-            'on': /local/images/sleep.svg
-        type: picture-entity
+          'off': /local/images/wake.svg
+          'on': /local/images/sleep.svg
         tap_action:
-            action: call-service
-            service: script.turn_on
-            service_data:
-                entity_id: script.nattmodus_oppe_toggle
-      - name: Garasjedør
-        entity: binary_sensor.garage_open
+          action: call-service
+          service: script.turn_on
+          service_data:
+            entity_id: script.nattmodus_oppe_toggle
+      - type: picture-entity
+        entity: input_boolean.nattmodus_hoved
         state_image:
-            'on': /local/images/garage_open.svg
-            'off': /local/images/garage_closed.svg
+          'off': /local/images/wake.svg
+          'on': /local/images/sleep.svg
+        tap_action:
+          action: call-service
+          service: script.turn_on
+          service_data:
+            entity_id: script.nattmodus_hoved_toggle
+    - type: conditional
+      conditions:
+      - entity: binary_sensor.garage_open
+        state_not: 'off'
+      card:
         type: picture-entity
-      - entity: light.stue
-        id: ce21d66b8cdb426085b0063d97b0c98c
-        type: entity-button
-      - entity: light.gang
-        id: 932ec73ca9c44367bca7d511667cad36
-        type: entity-button
-      - entity: light.gangoppe
-        id: 2a3b1b9b969246fc9a253e86ed18e271
-        type: entity-button
-      - entities:
-        - sun.sun
-        - sensor.yr_symbol
-        - sensor.temperatur_gang
-        - sensor.temperatur_stue
-        - sensor.temperatur_kjeller
-        - sensor.temperatur_ute
-        type: glance
-      icon: 'mdi:home-assistant'
-      id: hoved
-      theme: dark-mode
-      title: Hoved
-    - background: 'radial-gradient(crimson, skyblue)'
-      cards:
-      - entity: climate.stue_varme
-        id: 281b7b00e9574e69a9e9feb70b8817e4
-        type: thermostat
-      - entity: climate.kjeller_varme
-        id: 1a4247d49c0b4d529b7b5fe5e3a08e22
-        type: thermostat
-      - entities:
-        - input_number.ferie_temperatur
-        - input_number.kjeller_hjemmekontor_temperatur
-        - input_number.kjeller_normal_temperatur
-        - input_number.stue_morgen_temperatur
-        - input_number.stue_dagtid_temperatur
-        - input_number.stue_ettermiddag_temperatur
-        - input_number.stue_natt_temperatur
-        id: f6e839943f1547318201d5662918dda4
-        show_header_toggle: false
-        title: Temperaturer
-        type: entities
-      - entities:
-        - input_boolean.ferie_modus
-        - input_boolean.hjemmekontor_modus
-        id: 617c58edfd624d3e8a1e7f6630a5a3e5
-        show_header_toggle: false
-        title: Moduser
-        type: entities
-      - entities:
-        - climate.stue_varme
-        - climate.kjeller_varme
-        id: 19a6c5c3ab684161ab39eea0175b12a1
-        title: Termostat
-        type: entities
-      id: varme
-      theme: dark-mode
-      title: Varme
-    - background: 'radial-gradient(crimson, skyblue)'
-      cards:
-      - entities:
-        - light.stue
-        - light.gang
-        - light.pyntelampe
-        - light.sofa
-        - light.gangoppe
-        - light.nattlys_isabell
-        - light.nattlys_aleksander
-        id: 47a400f2d8844a0ea66610bb82809ac7
-        show_header_toggle: false
-        title: Lys
-        type: entities
-      - entities:
-        - switch.ekstra_bryter
-        - switch.ekstra_bryter_2
-        id: 8a2947ff2ece48b48696eada13224513
-        show_header_toggle: false
-        title: Julelys
-        type: entities
-      - entities:
-        - switch.fluxer_mired
-        - switch.fluxer_xy
-        id: d7967c563d2146fb989a336122431190
-        show_header_toggle: false
-        title: Fluxer
-        type: entities
-      id: lys
-      theme: dark-mode
-      title: Lys
+        entity: binary_sensor.garage_open
+        name: Garasjedør
+        state_image:
+          'off': /local/images/garage_closed.svg
+          'on': /local/images/garage_open.svg
+  badges: []
+- background: 'radial-gradient(crimson, skyblue)'
+  cards:
+  - type: horizontal-stack
+    cards:
+    - type: entity-button
+      entity: light.stue
+      tap_action:
+        action: toggle
+  - type: horizontal-stack
+    cards:
+    - type: entity-button
+      entity: light.sofa
+      tap_action:
+        action: toggle
+    - type: entity-button
+      entity: light.spisebord
+      tap_action:
+        action: toggle
+    - type: entity-button
+      entity: light.pyntelampe
+      tap_action:
+        action: toggle
+    - type: entity-button
+      entity: light.gang
+      tap_action:
+        action: toggle
+  - type: horizontal-stack
+    cards:
+    - type: entity-button
+      entity: light.nattlys_isabell
+      tap_action:
+        action: toggle
+    - type: entity-button
+      entity: light.nattlys_aleksander
+      tap_action:
+        action: toggle
+    - type: entity-button
+      entity: light.gangoppe
+      tap_action:
+        action: toggle
+  badges: []
+  title: Lys
+  path: lys
+- background: 'radial-gradient(crimson, skyblue)'
+  cards:
+  - type: vertical-stack
+    cards:
+    - type: sensor
+      entity: sensor.lysstyrke_ute
+      name: Lysstyrke ute
+      graph: line
+    - type: sensor
+      entity: sensor.lysstyrke_gang
+      name: Lysstyrke gang
+      graph: line
+    - type: sensor
+      entity: sensor.lysstyrke_stue
+      name: Lysstyrke stue
+      graph: line
+    - type: sensor
+      entity: sensor.lysstyrke_kjeller
+      name: Lysstyrke kjeller
+      graph: line
+  badges: []
+  title: Div

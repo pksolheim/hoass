@@ -108,7 +108,7 @@ switch: !include_dir_merge_list switch/
 script: !include_dir_merge_named scripts/
 device_tracker: !include device_tracker.yaml
 climate: !include climate/climate.yaml
-
+scene: !include_dir_list scene/
 
 deconz:
   host: 192.168.1.201
@@ -124,6 +124,12 @@ binary_sensor: !include_dir_merge_list input/binary_sensors/
 input_number: !include_dir_merge_named input/input_numbers/
 input_boolean: !include_dir_merge_named input/input_booleans/
 input_select: !include_dir_merge_named input/input_selects/
+
+google_assistant:
+  project_id: !secret google_project_id
+  api_key: !secret google_api_key
+  exposed_domains:
+  - light
 
 history_graph:
   temperature_outside:

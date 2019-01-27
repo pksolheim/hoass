@@ -9,3 +9,7 @@ nattmodus_hoved:
 nattmodus_hoved_dimmet:
   name: "Nattmodus hovedetasje dimmet"
   initial: off
+
+nattlys_vekketid_custom:
+  name: "Nattlys vekketid custom"
+  initial: off

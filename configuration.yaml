@@ -147,5 +147,7 @@ logger:
   default: info
   logs:
     pydeconz: info
+    homeassistant.components.switch.flux: warning
+    homeassistant.components.http.view: warning
     homeassistant.components.deconz: info
     homeassistant.components.device_tracker.nmap_tracker: critical

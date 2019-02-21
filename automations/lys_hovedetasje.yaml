@@ -81,7 +81,7 @@
   initial_state: True
   trigger:
     platform: state
-    entity_id: binary_sensor.bevegelse_hoveetasje
+    entity_id: binary_sensor.aktivitet_hoveetasje
     to: 'off'
     for:
       minutes: 5

@@ -13,6 +13,8 @@ homeassistant:
   # Customization file
   customize: !include customize.yaml
 
+system_health:
+
 # Show links to resources in log and frontend
 #introduction:
 

@@ -79,3 +79,18 @@
       brightness: 2
       transition: 10
       rgb_color: [102,204,0]
+
+- alias:  Nattmodus oppe av
+  initial_state: True
+  trigger:
+  - platform: time
+    at: '08:00:00'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.nattmodus_oppe
+      state: 'on'
+  action:
+  - service: script.turn_on
+    entity_id:  script.nattmodus_oppe_av

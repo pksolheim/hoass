@@ -2,7 +2,7 @@
   sensors:
     bevegelse_hoveetasje:
       friendly_name: "Bevegelse i hovedetasjen"
-      device_class: motion
+      device_class: moving
       entity_id:
       - binary_sensor.bevegelse_gang
       - binary_sensor.bevegelse_stue
@@ -18,7 +18,7 @@
   sensors:
     aktivitet_hoveetasje:
       friendly_name: "Aktivitet i hovedetasjen"
-      device_class: motion
+      device_class: moving
       entity_id:
       - binary_sensor.bevegelse_gang
       - binary_sensor.bevegelse_stue

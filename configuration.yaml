@@ -152,4 +152,4 @@ logger:
     homeassistant.components.switch.flux: warning
     homeassistant.components.http.view: warning
     homeassistant.components.deconz: info
-    homeassistant.components.device_tracker.nmap.tracker: critical
+    homeassistant.components.device_tracker.nmap_tracker: critical

@@ -1,0 +1,34 @@
+stue_morgen_temperatur:
+  name: Stue morgen temperatur
+  initial: 22
+  min: 18
+  max: 25
+  step: 1
+
+stue_dagtid_temperatur:
+  name: Stue dagtid temperatur
+  initial: 19
+  min: 16
+  max: 25
+  step: 1
+
+stue_ettermiddag_varmup:
+  name: Stue ettermiddag varmup temperatur
+  initial: 20
+  min: 18
+  max: 25
+  step: 1
+
+stue_ettermiddag_temperatur:
+  name: Stue ettermiddag temperatur
+  initial: 23
+  min: 18
+  max: 25
+  step: 1
+
+stue_natt_temperatur:
+  name: Stue natt temperatur
+  initial: 19
+  min: 16
+  max: 25
+  step: 1

@@ -1,0 +1,5 @@
+nattlys_vekketid:
+  name: Nattlys vekketid
+  has_date: false
+  has_time: true
+  initial: '06:15:00'

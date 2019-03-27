@@ -1,0 +1,155 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 59.911491
+  longitude: 10.757933
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Oslo
+  # Customization file
+  customize: !include customize.yaml
+
+system_health:
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret http_password
+#  ssl_certificate: !secret duckdns_certificate
+#  ssl_key: !secret duckdns_key
+#  base_url: !secret base_url
+
+duckdns:
+  domain: !secret duckdns_domain
+  access_token: !secret duckdns_token
+
+notify:
+- platform: pushbullet
+  name: pk
+  api_key: !secret pushbullet_api_key
+- platform: webostv
+  name: tv
+  host: 192.168.1.107
+  filename: webostv.conf
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+#Purge hiostory after 7 days
+recorder:
+  purge_keep_days: 3
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+#map:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: yr
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+#  - platform: entur_public_transport
+#    stop_ids:
+#    - 'NSR:StopPlace:58249'
+
+
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+media_player:
+- platform: webostv
+  name: TV Stue
+  host: 192.168.1.107
+  filename: webostv.conf
+
+# Z-Wave support
+zwave:
+  usb_path: /dev/zwave
+
+group: !include groups.yaml
+automation: !include_dir_merge_list automations/
+switch: !include_dir_merge_list switch/
+script: !include_dir_merge_named scripts/
+device_tracker: !include device_tracker.yaml
+climate: !include climate/climate.yaml
+scene: !include_dir_list scene/
+
+deconz:
+  host: 192.168.1.202
+  port: 8080
+
+#camera:
+#- platform: push
+#  name: Motion
+#  token: 12345678
+
+### Input
+binary_sensor: !include_dir_merge_list input/binary_sensors/
+input_number: !include_dir_merge_named input/input_numbers/
+input_boolean: !include_dir_merge_named input/input_booleans/
+input_select: !include_dir_merge_named input/input_selects/
+input_datetime: !include_dir_merge_named input/input_datetime/
+
+google_assistant:
+  project_id: !secret google_project_id
+  api_key: !secret google_api_key
+  exposed_domains:
+  - light
+
+history_graph:
+  temperature_outside:
+    name: 'Temperatur siste 24 timer'
+    hours_to_show: 24
+    refresh: 120
+    entities:
+    - sensor.temperatur_ute
+    - sensor.temperatur_gang
+    - sensor.temperatur_kjeller
+
+#Logger level with debug
+logger:
+  default: info
+  logs:
+    pydeconz: info
+    homeassistant.components.switch.flux: warning
+    homeassistant.components.http.view: warning
+    homeassistant.components.deconz: info
+    homeassistant.components.device_tracker.nmap_tracker: critical

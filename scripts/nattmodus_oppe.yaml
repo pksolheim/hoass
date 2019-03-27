@@ -1,0 +1,58 @@
+nattmodus_oppe_toggle:
+  alias: Nattmodus oppe av/pp
+  sequence:
+  - service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if states.input_boolean.nattmodus_oppe.state == 'off' %}
+          script.nattmodus_oppe_pa
+        {% else %}
+          script.nattmodus_oppe_av
+        {% endif %}
+
+nattmodus_oppe_pa:
+  alias: Nattmodus oppe på
+  sequence:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.nattmodus_oppe
+  - service: light.turn_off
+    entity_id: light.gangoppe1
+  - service: light.turn_on
+    data:
+      entity_id: light.gangoppe2
+      brightness: 12
+  - service: light.turn_on
+    data:
+      entity_id: light.nattlys_isabell
+      rgb_color: [204,0,102]
+  - service: light.turn_on
+    data:
+      entity_id: light.nattlys_aleksander
+      rgb_color: [0,0,153]
+  - delay:
+      seconds: 2
+  - service: light.turn_on
+    data:
+      entity_id:
+      - light.nattlys_isabell
+      - light.nattlys_aleksander
+      brightness: 1
+      transition: 10
+
+nattmodus_oppe_av:
+  alias: Nattmodus oppe av
+  sequence:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.nattmodus_oppe
+  - service: light.turn_on
+    data:
+      entity_id: light.gangoppe1
+      brightness: 255
+  - service: light.turn_on
+    data:
+      entity_id: light.gangoppe2
+      brightness: 255
+  - service: light.turn_off
+    entity_id: light.nattlys_isabell
+  - service: light.turn_off
+    entity_id: light.nattlys_aleksander

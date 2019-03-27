@@ -1,0 +1,34 @@
+- platform: template
+  sensors:
+    bevegelse_hoveetasje:
+      friendly_name: "Bevegelse i hovedetasjen"
+      device_class: moving
+      entity_id:
+      - binary_sensor.bevegelse_gang
+      - binary_sensor.bevegelse_stue
+      value_template: >-
+        {% if is_state('binary_sensor.bevegelse_gang', 'on')
+           or is_state('binary_sensor.bevegelse_stue', 'on') %}
+           true
+        {% else %}
+           false
+        {% endif %}
+
+- platform: template
+  sensors:
+    aktivitet_hoveetasje:
+      friendly_name: "Aktivitet i hovedetasjen"
+      device_class: moving
+      entity_id:
+      - binary_sensor.bevegelse_gang
+      - binary_sensor.bevegelse_stue
+      - device_tracker.stuetv
+      value_template: >-
+        {% if is_state('binary_sensor.bevegelse_gang', 'on')
+           or is_state('binary_sensor.bevegelse_stue', 'on')
+          or is_state('device_tracker.stuetv', 'home')
+           %}
+           true
+        {% else %}
+           false
+        {% endif %}

@@ -1,0 +1,7 @@
+pyntelampe_color:
+  initial: green
+  options:
+  - red
+  - green
+  - yellow
+  - blue

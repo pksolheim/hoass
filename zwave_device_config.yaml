@@ -1,0 +1,3 @@
+sensor.temperatur_stue:
+  ignored: false
+  polling_intensity: 0

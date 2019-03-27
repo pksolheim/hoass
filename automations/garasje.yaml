@@ -1,0 +1,39 @@
+- alias: "Garasjen er apen"
+  initial_state: true
+  trigger:
+  - platform: state
+    entity_id:
+    - binary_sensor.garage_open
+    to: 'on'
+    for:
+      minutes: 15
+  action:
+    - service: notify.pk
+      data_template:
+        title: "Garasjen er åpen"
+        message: "Garasjen står åpen"
+    - service: notify.tv
+      data_template:
+        title: "Garasjen er åpen"
+        message: "Garasjen står åpen"
+
+- alias: Hovedetasje nattmodus av
+  initial_state: True
+  trigger:
+  - platform: time
+    at: '22:15:00'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: binary_sensor.garage_open
+      state: 'on'
+  action:
+    - service: notify.pk
+      data_template:
+        title: "Garasjen er åpen"
+        message: "Garasjen står åpen"
+    - service: notify.tv
+      data_template:
+        title: "Garasjen er åpen"
+        message: "Garasjen står åpen"

@@ -1,0 +1,11 @@
+stue_varme:
+  name: Stue varme
+  entities:
+  - switch.varme1_stue
+  - switch.varme2_stue
+  - switch.varmeovn_kjokken
+
+kjeller_varme:
+  name: Kjeller varme
+  entities:
+  - switch.varme1_kjeller

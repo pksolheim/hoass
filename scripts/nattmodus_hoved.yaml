@@ -1,0 +1,51 @@
+nattmodus_hoved_toggle:
+  alias: Nattmodus hoved av/pp
+  sequence:
+  - service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if states.input_boolean.nattmodus_hoved.state == 'off' %}
+          script.nattmodus_hoved_pa
+        {% else %}
+          script.nattmodus_hoved_av
+        {% endif %}
+
+nattmodus_hoved_pa:
+  alias: Nattmodus hoved på
+  sequence:
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.nattmodus_hoved
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.nattmodus_hoved_dimmet
+  - service: switch.turn_off
+    entity_id: switch.ekstra_bryter
+  - service: switch.turn_off
+    entity_id: switch.ekstra_bryter_2
+  - service: light.turn_on
+    data:
+      entity_id: light.stue
+      brightness: 12
+  - service: light.turn_on
+    data:
+      entity_id: light.gang
+      brightness: 12
+
+nattmodus_hoved_av:
+  alias: Nattmodus hoved av
+  sequence:
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.nattmodus_hoved
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.nattmodus_hoved_dimmet
+  - service: switch.turn_on
+    entity_id: switch.ekstra_bryter
+  - service: switch.turn_on
+    entity_id: switch.ekstra_bryter_2
+  - service: light.turn_on
+    data:
+      entity_id: light.stue
+      brightness: 255
+  - service: light.turn_on
+    data:
+      entity_id: light.gang
+      brightness: 255

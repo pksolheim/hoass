@@ -1,0 +1,6 @@
+device_tracker.ekstratelefonen:
+  friendly_name: Ekstratelefonen
+device_tracker.pk:
+  friendly_name: PK
+device_tracker.trine:
+  friendly_name: Trine

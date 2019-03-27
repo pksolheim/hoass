@@ -1,0 +1,9 @@
+- alias: "Ekstratelefonen er av varsel"
+  trigger:
+    platform: state
+    entity_id: device_tracker.ekstratelefonen
+  action:
+    service: notify.pk
+    data_template:
+      title: "Ekstratelefonen er {% if is_state('device_tracker.ekstratelefonen', 'not_home') %}IKKE{% endif %} på nettet!"
+      message: "Ekstratelefonen er {% if is_state('device_tracker.ekstratelefonen', 'not_home') %}IKKE{% endif %} på nettet!"

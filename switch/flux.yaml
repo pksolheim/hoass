@@ -19,7 +19,23 @@
   - light.sofa1
   - light.sofa2
   - light.sofa3
-  name: Fluxer xy
+  - light.pyntelampe
+  name: Fluxer sofa
+  start_time: '6:00'
+  stop_time: '23:00'
+  start_colortemp: 4000
+  sunset_colortemp: 3000
+  stop_colortemp: 1900
+  brightness: 200
+  disable_brightness_adjust: True
+  mode: xy
+  transition: 30
+  interval: 60
+
+- platform: flux
+  lights:
+    - light.gang_tak
+  name: Fluxer gang
   start_time: '6:00'
   stop_time: '23:00'
   start_colortemp: 4000
@@ -34,7 +50,7 @@
 - platform: flux
   lights:
   - light.spisebord
-  name: Fluxer mired
+  name: Fluxer spisebord
   start_time: '6:00'
   stop_time: '23:00'
   start_colortemp: 4000

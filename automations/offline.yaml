@@ -3,11 +3,12 @@
   trigger:
   - platform: state
     entity_id:
-    - light.gu10
-    - light.gang2
-    - light.gang3
-    - light.gang4
-    - light.gang5
+    - light.gang_tak
+    - light.kjokken_tak1
+    - light.kjokken_tak2
+    - light.kjokken_tak3
+    - light.kjokken_tak4
+    - light.kjokken_tak5
     - light.gangoppe1
     - light.gangoppe2
     - light.lampekjeller
@@ -20,9 +21,8 @@
     - light.ute1
     - light.ute2
     - light.ute3
-    to: 'unavailable'
     for:
-      seconds: 60
+      seconds: 120
   action:
     service: notify.pk
     data_template:

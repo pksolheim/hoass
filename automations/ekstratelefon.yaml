@@ -1,6 +1,8 @@
 - alias: "Ekstratelefonen er av varsel"
   trigger:
     platform: state
+    for:
+      seconds: 120
     entity_id: device_tracker.ekstratelefonen
   action:
     service: notify.pk

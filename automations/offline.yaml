@@ -21,8 +21,6 @@
     - light.ute1
     - light.ute2
     - light.ute3
-    for:
-      seconds: 120
   action:
     service: notify.pk
     data_template:

@@ -1,0 +1,168 @@
+
+raspberrypi:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:9C:57:2E
+  name: raspberrypi
+  picture:
+  track: false
+
+persmbp:
+  hide_if_away: false
+  icon:
+  mac: 8C:85:90:85:9B:93
+  name: Pers-MBP
+  picture:
+  track: false
+
+galaxys8:
+  hide_if_away: false
+  icon:
+  mac: 30:07:4D:4E:16:BD
+  name: Galaxy-S8
+  picture:
+  track: true
+
+lgwebostv:
+  hide_if_away: false
+  icon:
+  mac: E8:F2:E2:0E:F5:3A
+  name: LGwebOSTV
+  picture:
+  track: true
+
+trinesinipad:
+  hide_if_away: false
+  icon:
+  mac: F0:D1:A9:39:4D:4D
+  name: trine-sin-iPad
+  picture:
+  track: false
+
+persmbp_2:
+  hide_if_away: false
+  icon:
+  mac: A4:5E:60:C7:3A:7F
+  name: Pers-MBP
+  picture:
+  track: false
+
+chromecastaudio:
+  hide_if_away: false
+  icon:
+  mac: 54:60:09:FA:08:24
+  name: Chromecast-Audio
+  picture:
+  track: false
+
+ekstratelefon:
+  hide_if_away: false
+  icon:
+  mac: 4C:66:41:0F:C3:23
+  name: Ekstratelefon
+  picture:
+  track: true
+
+hpa448dc:
+  hide_if_away: false
+  icon:
+  mac: F0:92:1C:A4:48:DC
+  name: HPA448DC
+  picture:
+  track: false
+
+isabell:
+  hide_if_away: false
+  icon:
+  mac: D8:1C:79:B9:1C:61
+  name: iSabell
+  picture:
+  track: true
+
+unknown:
+  hide_if_away: false
+  icon:
+  mac: 6C:AD:F8:AA:77:4A
+  name: Unknown
+  picture:
+  track: true
+
+chromecastaudio_2:
+  hide_if_away: false
+  icon:
+  mac: 54:60:09:F9:7F:14
+  name: Chromecast-Audio
+  picture:
+  track: true
+
+unknown_2:
+  hide_if_away: false
+  icon:
+  mac: 00:1A:E9:B3:74:45
+  name: Unknown
+  picture:
+  track: true
+
+unknown_3:
+  hide_if_away: false
+  icon:
+  mac: 18:74:2E:FB:6A:4E
+  name: Unknown
+  picture:
+  track: true
+
+unknown_4:
+  hide_if_away: false
+  icon:
+  mac: 9C:04:EB:9A:E0:00
+  name: Unknown
+  picture:
+  track: true
+
+androidc6e9beb25481caf9:
+  hide_if_away: false
+  icon:
+  mac: 7C:F9:0E:23:E7:79
+  name: android-c6e9beb25481caf9
+  picture:
+  track: true
+
+unknown_5:
+  hide_if_away: false
+  icon:
+  mac: E0:5F:45:9C:57:87
+  name: Unknown
+  picture:
+  track: true
+
+unknown_6:
+  hide_if_away: false
+  icon:
+  mac: D4:E6:B7:88:20:D3
+  name: Unknown
+  picture:
+  track: true
+
+unknown_7:
+  hide_if_away: false
+  icon:
+  mac: 5C:52:1E:13:73:1B
+  name: Unknown
+  picture:
+  track: true
+
+android2bfe2852f7ed3c5f:
+  hide_if_away: false
+  icon:
+  mac: 34:14:5F:6C:27:1B
+  name: android-2bfe2852f7ed3c5f
+  picture:
+  track: true
+
+unknown_8:
+  hide_if_away: false
+  icon:
+  mac: 50:B7:C3:50:A9:F5
+  name: Unknown
+  picture:
+  track: true

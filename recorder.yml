@@ -1,32 +1,32 @@
 
-purge_interval: 1
-purge_keep_days: 3
-exclude:
-  domains:
-    - automation
-    - weblink
-    - updater
-    - group
-    - script
-    - switch
-    - zone
-    - zwave
-    - sensor
-    - device_tracker
-  entities:
-    - sun.sun
-include:
-  entities:
-    - binary_sensor.aktivitet_hoveetasje
-    - binary_sensor.bevegelse_gang
-    - binary_sensor.bevegelse_hoveetasje
-    - binary_sensor.bevegelse_kjeller
-    - binary_sensor.bevegelse_stue
-    - binary_sensor.door_open
-    - binary_sensor.garage_open
-    - ssensor.temperatur_gang
-    - sensor.temperatur_kjeller
-    - sensor.temperatur_stue
-    - sensor.temperatur_ute
-  domains:
-    - climate
+  purge_interval: 1
+  purge_keep_days: 3
+  exclude:
+    domains:
+      - automation
+      - weblink
+      - updater
+      - group
+      - script
+      - switch
+      - zone
+      - zwave
+      - sensor
+      - device_tracker
+    entities:
+      - sun.sun
+  include:
+    entities:
+      - binary_sensor.aktivitet_hoveetasje
+      - binary_sensor.bevegelse_gang
+      - binary_sensor.bevegelse_hoveetasje
+      - binary_sensor.bevegelse_kjeller
+      - binary_sensor.bevegelse_stue
+      - binary_sensor.door_open
+      - binary_sensor.garage_open
+      - ssensor.temperatur_gang
+      - sensor.temperatur_kjeller
+      - sensor.temperatur_stue
+      - sensor.temperatur_ute
+    domains:
+      - climate

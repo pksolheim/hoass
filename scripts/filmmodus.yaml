@@ -1,13 +1,13 @@
 filmmodus_toggle:
-  alias: Nattmodus oppe av/pp
+  alias: filmmodus toggle
   sequence:
+  - service: input_boolean.toggle
+    entity_id: input_boolean.filmmodus_hoved
   - service: scene.turn_on
     data_template:
       entity_id: >
-        {% if states.input_boolean.filmmodus_hovedetasje.state == 'off' %}
+        {% if states.input_boolean.filmmodus_hoved.state == 'off' %}
           scene.hovedetasje_normal
         {% else %}
-          script.hovedetasje_filmmodus
+          script.hovedetasje_film
         {% endif %}
-  - service: input_boolean.toggle
-    entity_id: input_boolean.filmmodus_hovedetasje

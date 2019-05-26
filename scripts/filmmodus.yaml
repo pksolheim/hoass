@@ -10,4 +10,4 @@ filmmodus_toggle:
           script.hovedetasje_filmmodus
         {% endif %}
   - service: input_boolean.toggle
-      entity_id: input_boolean.filmmodus_hovedetasje
+    entity_id: input_boolean.filmmodus_hovedetasje

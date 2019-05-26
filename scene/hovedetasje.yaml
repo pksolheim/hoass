@@ -1,5 +1,4 @@
-hovedetasje_normal:
-  alias: "hovedetasje normal"
+- name: Hovedetasje normal
   entities:
     light.stue:
       state: on
@@ -14,8 +13,7 @@ hovedetasje_normal:
     switch.ekstra_bryter_2:
       state: 'on'
 
-hovedetasje_film:
-  alias: "hovedetasje film"
+- name: Hovedetasje film
   entities:
     light.stue:
       state: off'

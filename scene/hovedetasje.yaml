@@ -1,0 +1,24 @@
+- name: Hovedetasje normal
+  entities:
+    light.stue:
+      state: on
+      transition: 3
+      brightness_pct: 100
+    light.gang:
+      state: on
+      transition: 3
+      brightness_pct: 100
+    switch.ekstra_bryter:
+      state: 'on'
+    switch.ekstra_bryter_2:
+      state: 'on'
+
+- name: Hovedetasje film
+  entities:
+    light.stue:
+      state: off'
+      transition: 3
+    light.gang:
+      state: on
+      transition: 3
+      brightness_pct: 5

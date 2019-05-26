@@ -16,7 +16,7 @@
 - name: Hovedetasje film
   entities:
     light.stue:
-      state: off'
+      state: 'off'
       transition: 3
     light.gang:
       state: on

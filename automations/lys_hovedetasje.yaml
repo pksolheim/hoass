@@ -10,6 +10,9 @@
     - condition: state
       entity_id: light.stue
       state: 'off'
+    - condition: state
+      entity_id: input_boolean.filmmodus_hoved
+      state: 'off'
   action:
   - service: light.turn_on
     data_template:

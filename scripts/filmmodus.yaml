@@ -1,13 +1,23 @@
 filmmodus_toggle:
   alias: filmmodus toggle
   sequence:
-  - service: input_boolean.toggle
-    entity_id: input_boolean.filmmodus_hoved
-  - service: scene.turn_on
-    data_template:
-      entity_id: >
-        {% if states.input_boolean.filmmodus_hoved.state == 'off' %}
-          scene.hovedetasje_normal
-        {% else %}
-          script.hovedetasje_film
-        {% endif %}
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if states.input_boolean.filmmodus_hoved.state == 'off' %}
+            script.filmmodus_pa
+          {% else %}
+            script.filmmodus_av
+          {% endif %}
+
+filmmodus_pa:
+  alias: Filmmouds på
+  sequence:
+    - service: scene.turn_on
+      entity_id: scene.hovedetasje_film
+
+filmmodus_av:
+  alias: Filmmodus av
+  sequence:
+    - service: scene.turn_on
+      entity_id: scene.hovedetasje_normal

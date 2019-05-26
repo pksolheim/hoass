@@ -15,9 +15,13 @@ filmmodus_pa:
   sequence:
     - service: scene.turn_on
       entity_id: scene.hovedetasje_film
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.filmmodus_hoved
 
 filmmodus_av:
   alias: Filmmodus av
   sequence:
     - service: scene.turn_on
       entity_id: scene.hovedetasje_normal
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.filmmodus_hoved

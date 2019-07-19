@@ -1,5 +1,5 @@
 - platform: generic_thermostat
-  name: 'Stue varme'
+  name: Stue_varme
   heater: group.stue_varme
   target_sensor: sensor.temperatur_gang
   min_temp: 12
@@ -15,7 +15,7 @@
   away_temp: 17
 
 - platform: generic_thermostat
-  name: 'Kjeller varme'
+  name: Kjeller_varme
   heater: group.kjeller_varme
   target_sensor: sensor.temperatur_kjeller
   min_temp: 12

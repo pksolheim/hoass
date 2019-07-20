@@ -6,6 +6,11 @@ hjemmekontor_modus:
   name: Hjemmekontor
   initial: off
 
+fake_heater:
+  name: Fake Heater
+  icon: mdi:toggle-switch-off
+  initial: off
+
 #halloween_modus:
 #  name: Halloween
 #  initial: off

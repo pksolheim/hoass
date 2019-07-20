@@ -34,5 +34,5 @@
   name: Temperatur ute
   heater: input_boolean.fake_heater
   target_sensor: sensor.temperatur_ute
-  initial_operation_mode: "off"
+  initial_hvac_mode: "off"
   target_temp: 21

@@ -133,6 +133,9 @@ google_assistant:
   api_key: !secret google_api_key
   exposed_domains:
   - light
+  - sensor
+  - climate
+  - script
 
 history_graph:
   temperature_outside:

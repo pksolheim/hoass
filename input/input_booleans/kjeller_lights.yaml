@@ -1,7 +1,5 @@
 kjeller_lights_on_auto:
   name: "Kjellerlys automatisk på"
-  initial: off
 
 kjeller_lights_dimmed_auto:
-  name: "KJellerlys automatisk dimmet"
-  initial: off
+  name: "Kjellerlys automatisk dimmet"

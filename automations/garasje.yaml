@@ -1,5 +1,4 @@
 - alias: "Garasjen er apen"
-  initial_state: true
   trigger:
   - platform: state
     entity_id:
@@ -18,7 +17,6 @@
         message: "Garasjen står åpen"
 
 - alias: Hovedetasje nattmodus av
-  initial_state: True
   trigger:
   - platform: time
     at: '22:15:00'

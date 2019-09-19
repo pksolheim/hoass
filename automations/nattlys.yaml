@@ -81,7 +81,6 @@
       rgb_color: [102,204,0]
 
 - alias:  Nattmodus oppe av
-  initial_state: True
   trigger:
   - platform: time
     at: '08:00:00'

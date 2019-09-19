@@ -1,15 +1,11 @@
 nattmodus_oppe:
   name: "Nattmodus oppe"
-  initial: off
 
 nattmodus_hoved:
   name: "Nattmodus hovedetasje"
-  initial: off
 
 nattmodus_hoved_dimmet:
   name: "Nattmodus hovedetasje dimmet"
-  initial: off
 
 nattlys_vekketid_custom:
   name: "Nattlys vekketid custom"
-  initial: off

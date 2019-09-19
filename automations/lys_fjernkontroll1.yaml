@@ -1,5 +1,4 @@
 - alias: 'Lys stue on'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event
@@ -13,7 +12,6 @@
     entity_id: light.gang
 
 - alias: 'Lys stue off'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event
@@ -27,7 +25,6 @@
     entity_id: light.gang
 
 - alias: 'Lys stue dimme opp'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event
@@ -49,7 +46,6 @@
         {{ [bri+30, 249] | min }}
 
 - alias: 'Lys stue dimme ned'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event
@@ -71,7 +67,6 @@
         {{ [bri-30, 0] | max }}
 
 - alias: 'Lys stue bytte farge'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event

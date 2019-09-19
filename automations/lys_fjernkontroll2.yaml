@@ -1,5 +1,4 @@
 - alias: 'Lys kjeller on/off'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event
@@ -11,7 +10,6 @@
     entity_id: light.kjeller
 
 - alias: 'Lys kjeller dimme opp'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event
@@ -27,7 +25,6 @@
         {{ [bri+30, 254] | min }}
 
 - alias: 'Lys kjeller dimme ned'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event
@@ -43,7 +40,6 @@
         {{ [bri-100, 0] | max }}
 
 - alias: 'Lys kjeller varme opp'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event
@@ -59,7 +55,6 @@
         {{ [kel+50, 500] | min }}
 
 - alias: 'Lys kjeller varme ned'
-  initial_state: 'on'
   trigger:
     platform: event
     event_type: deconz_event

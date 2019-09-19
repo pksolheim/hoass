@@ -1,5 +1,4 @@
 - alias: Lys hovedetasje, på bevegelse
-  initial_state: True
   trigger:
     platform: state
     entity_id: binary_sensor.bevegelse_stue
@@ -34,7 +33,6 @@
         {% endif %}
 
 - alias: Lys gang, på bevegelse
-  initial_state: True
   trigger:
     platform: state
     entity_id: binary_sensor.bevegelse_gang
@@ -51,7 +49,6 @@
         {% endif %}
 
 - alias: Lys gang, på ytterdor
-  initial_state: True
   trigger:
     platform: state
     entity_id: binary_sensor.door_open
@@ -62,7 +59,6 @@
       brightness: 255
 
 - alias: Hovedetasje nattmodus av
-  initial_state: True
   trigger:
   - platform: state
     entity_id: binary_sensor.bevegelse_hoveetasje
@@ -81,7 +77,6 @@
     entity_id:  script.nattmodus_hoved_av
 
 - alias: Hovedetasje nattmodus dimmet av etter 5 min
-  initial_state: True
   trigger:
     platform: state
     entity_id: binary_sensor.aktivitet_hoveetasje
@@ -106,7 +101,6 @@
     entity_id: input_boolean.nattmodus_hoved_dimmet
 
 - alias: Lys gang, på bevegelse
-  initial_state: True
   trigger:
     platform: state
     entity_id: binary_sensor.bevegelse_gang
@@ -120,8 +114,3 @@
   action:
   - service: input_boolean.turn_on
     entity_id: input_boolean.nattmodus_hoved_dimmet
-
-##TODO
-# Da dempes lysene i de rommene hvor det er bevegelse (eller tven er på). Julelys etc slåes av.
-
-# Skru av nattmodus ved bevegelse etter klokka 06(hverdag/helg)

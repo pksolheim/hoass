@@ -1,5 +1,4 @@
 - alias: "Varsel lys offline"
-  initial_state: true
   trigger:
   - platform: state
     entity_id:

@@ -1,5 +1,4 @@
 - alias: Utelys pa, solnedgang
-  initial_state: true
   trigger:
     platform: sun
     event: sunset
@@ -9,7 +8,6 @@
     service: light.turn_on
 
 - alias: Utelys av, soloppgang
-  initial_state: true
   trigger:
     platform: sun
     event: sunrise

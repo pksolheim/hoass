@@ -32,3 +32,19 @@
         {% else %}
            false
         {% endif %}
+
+- platform: template
+  sensors:
+    aktivitet_i_huset:
+      friendly_name: "Aktivitet i huset"
+      device_class: moving
+      entity_id:
+        - binary_sensor.aktivitet_hoveetasje
+       # - binary_sensor.aktivitet_kjeller
+       # - binary_sensor.aktivitet_andreetasje
+      value_template: >-
+        {% if is_state('binary_sensor.aktivitet_hoveetasje', 'on') %}
+           true
+        {% else %}
+           false
+        {% endif %}

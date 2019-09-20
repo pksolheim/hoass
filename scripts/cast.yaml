@@ -1,0 +1,6 @@
+vis_smarthus:
+  alias: Vis smarthus
+  sequence:
+    - service: cast.show_lovelace_ui
+      entity_id: media_player.stue
+      view_path: hoved

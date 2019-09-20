@@ -3,5 +3,5 @@ vis_smarthus:
   sequence:
     - data:
         entity_id: media_player.stue
-        view_path: hoved
+        view_path: "hoved"
       service: cast.show_lovelace_view

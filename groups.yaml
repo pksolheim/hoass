@@ -1,6 +1,6 @@
 stue_varme:
   name: Stue varme
   entities:
-  - switch.varme1_stue
+  - switch.stue_varme
   - switch.varme2_stue
   - switch.varmeovn_kjokken

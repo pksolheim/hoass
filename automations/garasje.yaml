@@ -16,7 +16,7 @@
         title: "Garasjen er åpen"
         message: "Garasjen står åpen"
 
-- alias: Hovedetasje nattmodus av
+- alias: Garasje varsel kveld
   trigger:
   - platform: time
     at: '22:15:00'

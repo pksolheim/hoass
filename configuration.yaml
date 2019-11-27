@@ -25,7 +25,6 @@ frontend:
 config:
 
 http:
-  #api_password: !secret http_password
   ssl_certificate: !secret duckdns_certificate
   ssl_key: !secret duckdns_key
   base_url: !secret base_url

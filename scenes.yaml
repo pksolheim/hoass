@@ -1,0 +1,177 @@
+- id: '1575925212501'
+  name: Nattmodus på nede
+  entities:
+    switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch:
+      friendly_name: Bryter 3
+      node_id: 23
+      power_consumption: 1
+      state: 'on'
+      value_id: '72057594428604416'
+      value_index: 0
+      value_instance: 1
+    switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch_2:
+      friendly_name: Bryter 4
+      node_id: 24
+      power_consumption: 0
+      state: 'off'
+      value_id: '72057594445381632'
+      value_index: 0
+      value_instance: 1
+    zwave.fibaro_system_fgwpe_f_wall_plug_gen5_7:
+      application_version: '3.02'
+      averageRequestRTT: 0
+      averageResponseRTT: 0
+      capabilities:
+      - beaming
+      - routing
+      - listening
+      - zwave_plus
+      friendly_name: FIBARO System FGWPE/F Wall Plug Gen5
+      is_awake: true
+      is_failed: false
+      is_info_received: true
+      is_ready: false
+      is_zwave_plus: true
+      lastRequestRTT: 0
+      lastResponseRTT: 0
+      manufacturer_name: FIBARO System
+      max_baud_rate: 40000
+      node_id: 23
+      node_name: FIBARO System FGWPE/F Wall Plug Gen5
+      product_name: FGWPE/F Wall Plug Gen5
+      query_stage: Associations
+      receivedCnt: 0
+      receivedDups: 0
+      receivedTS: '2019-12-09 21:55:59:407 '
+      receivedUnsolicited: 0
+      retries: 0
+      sentCnt: 4
+      sentFailed: 0
+      sentTS: '2019-12-09 21:58:16:440 '
+      state: initializing
+    zwave.fibaro_system_fgwpe_f_wall_plug_gen5_8:
+      application_version: '3.02'
+      averageRequestRTT: 0
+      averageResponseRTT: 0
+      capabilities:
+      - beaming
+      - routing
+      - listening
+      - zwave_plus
+      friendly_name: FIBARO System FGWPE/F Wall Plug Gen5
+      is_awake: true
+      is_failed: false
+      is_info_received: true
+      is_ready: false
+      is_zwave_plus: true
+      lastRequestRTT: 0
+      lastResponseRTT: 0
+      manufacturer_name: FIBARO System
+      max_baud_rate: 40000
+      node_id: 24
+      node_name: FIBARO System FGWPE/F Wall Plug Gen5
+      product_name: FGWPE/F Wall Plug Gen5
+      query_stage: Associations
+      receivedCnt: 0
+      receivedDups: 0
+      receivedTS: '2019-12-09 21:55:59:408 '
+      receivedUnsolicited: 0
+      retries: 0
+      sentCnt: 4
+      sentFailed: 0
+      sentTS: '2019-12-09 21:58:17:466 '
+      state: initializing
+- id: '1575925411476'
+  name: Nattmodus nede pa
+  entities:
+    switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch:
+      friendly_name: Bryter 3
+      node_id: 23
+      power_consumption: 0
+      state: 'off'
+      value_id: '72057594428604416'
+      value_index: 0
+      value_instance: 1
+    switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch_2:
+      friendly_name: Bryter 4
+      node_id: 24
+      power_consumption: 0
+      state: 'off'
+      value_id: '72057594445381632'
+      value_index: 0
+      value_instance: 1
+    zwave.fibaro_system_fgwpe_f_wall_plug_gen5_7:
+      application_version: '3.02'
+      averageRequestRTT: 232
+      averageResponseRTT: 298
+      capabilities:
+      - beaming
+      - routing
+      - listening
+      - zwave_plus
+      friendly_name: FIBARO System FGWPE/F Wall Plug Gen5
+      is_awake: true
+      is_failed: false
+      is_info_received: true
+      is_ready: true
+      is_zwave_plus: true
+      lastRequestRTT: 124
+      lastResponseRTT: 198
+      manufacturer_name: FIBARO System
+      max_baud_rate: 40000
+      neighbors:
+      - 8
+      - 9
+      - 19
+      node_id: 23
+      node_name: FIBARO System FGWPE/F Wall Plug Gen5
+      product_name: FGWPE/F Wall Plug Gen5
+      query_stage: Complete
+      receivedCnt: 10
+      receivedDups: 0
+      receivedTS: '2019-12-09 22:01:40:343 '
+      receivedUnsolicited: 1
+      retries: 0
+      sentCnt: 18
+      sentFailed: 0
+      sentTS: '2019-12-09 22:01:40:145 '
+      state: ready
+    zwave.fibaro_system_fgwpe_f_wall_plug_gen5_8:
+      application_version: '3.02'
+      averageRequestRTT: 90
+      averageResponseRTT: 160
+      capabilities:
+      - beaming
+      - routing
+      - listening
+      - zwave_plus
+      friendly_name: FIBARO System FGWPE/F Wall Plug Gen5
+      is_awake: true
+      is_failed: false
+      is_info_received: true
+      is_ready: true
+      is_zwave_plus: true
+      lastRequestRTT: 73
+      lastResponseRTT: 146
+      manufacturer_name: FIBARO System
+      max_baud_rate: 40000
+      neighbors:
+      - 1
+      - 3
+      - 6
+      - 8
+      - 9
+      - 13
+      node_id: 24
+      node_name: FIBARO System FGWPE/F Wall Plug Gen5
+      product_name: FGWPE/F Wall Plug Gen5
+      query_stage: Complete
+      receivedCnt: 8
+      receivedDups: 0
+      receivedTS: '2019-12-09 22:03:21:187 '
+      receivedUnsolicited: 0
+      retries: 0
+      sentCnt: 20
+      sentFailed: 0
+      sentTS: '2019-12-09 22:03:21:041 '
+      state: ready

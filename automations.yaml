@@ -1,0 +1,18 @@
+- id: '1575925513204'
+  alias: Ny automatisering
+  description: ''
+  trigger:
+  - entity_id: input_boolean.nattmodus_hoved
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - device_id: 286e634e0ab64cc0b6a1cc831f8fd508
+    domain: switch
+    entity_id: switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch_2
+    type: turn_off
+  - device_id: 278210ddb582492484a6b6be81596f2c
+    domain: switch
+    entity_id: switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch
+    type: turn_off

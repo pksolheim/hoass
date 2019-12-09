@@ -1,4 +1,5 @@
-- name: Hovedetasje normal
+- id: my_unique_scene_id1
+  name: Hovedetasje normal
   entities:
     light.stue:
       state: on
@@ -13,7 +14,8 @@
     switch.ekstra_bryter_2:
       state: 'on'
 
-- name: Hovedetasje film
+- id: my_unique_scene_id2
+  name: Hovedetasje film
   entities:
     light.stue:
       state: 'off'

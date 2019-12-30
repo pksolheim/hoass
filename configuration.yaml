@@ -33,6 +33,9 @@ duckdns:
   domain: !secret duckdns_domain
   access_token: !secret duckdns_token
 
+tibber:
+  access_token: !secret tibber_token
+
 notify:
 - platform: pushbullet
   name: pk

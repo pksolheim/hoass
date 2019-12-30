@@ -1,5 +1,23 @@
 - id: '1575925513204'
-  alias: Ny automatisering
+  alias: Nattmodus på automasjon
+  description: ''
+  trigger:
+  - entity_id: input_boolean.nattmodus_hoved
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - device_id: 286e634e0ab64cc0b6a1cc831f8fd508
+    domain: switch
+    entity_id: switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch_2
+    type: turn_off
+  - device_id: 278210ddb582492484a6b6be81596f2c
+    domain: switch
+    entity_id: switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch
+    type: turn_off
+- id: '1576005670987'
+  alias: Nattmodus av automasjon
   description: ''
   trigger:
   - entity_id: input_boolean.nattmodus_hoved
@@ -11,8 +29,8 @@
   - device_id: 286e634e0ab64cc0b6a1cc831f8fd508
     domain: switch
     entity_id: switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch_2
-    type: turn_off
+    type: turn_on
   - device_id: 278210ddb582492484a6b6be81596f2c
     domain: switch
     entity_id: switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch
-    type: turn_off
+    type: turn_on

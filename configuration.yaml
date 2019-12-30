@@ -75,18 +75,7 @@ logbook:
 # Track the sun
 sun:
 
-# Weather prediction
-sensor:
-  - platform: yr
-  - platform: time_date
-    display_options:
-      - 'time'
-      - 'date'
-#  - platform: entur_public_transport
-#    stop_ids:
-#    - 'NSR:StopPlace:58249'
-
-
+sensor: !include sensor/sensor.yaml
 
 # Text to speech
 tts:

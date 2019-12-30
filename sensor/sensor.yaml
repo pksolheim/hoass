@@ -16,31 +16,31 @@
 
 #### TIBBER ##################################
 - platform: template
-    sensors:
-      tibber_nett:
-        friendly_name: "Nett Eier"
-        value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'grid_company') }}"
-        icon_template: mdi:fuse
-      tibber_max:
-        friendly_name: "Max pris"
-        unit_of_measurement: "NOK/kWh"
-        value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'max_price') }}"
-        icon_template: mdi:currency-usd
-      tibber_avg:
-        friendly_name: "Gjennomsnittspris"
-        unit_of_measurement: "NOK/kWh"
-        value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'avg_price') }}"
-        icon_template: mdi:currency-usd
-      tibber_min:
-        friendly_name: "Minimumspris"
-        unit_of_measurement: "NOK/kWh"
-        value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'min_price') }}"
-        icon_template: mdi:currency-usd
-      tibber_estimert:
-        unit_of_measurement: 'kWh'
-        friendly_name: "Estimert forbruk"
-        value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'estimated_annual_consumption') }}"
-        icon_template: mdi:power-plug
+  sensors:
+    tibber_nett:
+      friendly_name: "Nett Eier"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'grid_company') }}"
+      icon_template: mdi:fuse
+    tibber_max:
+      friendly_name: "Max pris"
+      unit_of_measurement: "NOK/kWh"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'max_price') }}"
+      icon_template: mdi:currency-usd
+    tibber_avg:
+      friendly_name: "Gjennomsnittspris"
+      unit_of_measurement: "NOK/kWh"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'avg_price') }}"
+      icon_template: mdi:currency-usd
+    tibber_min:
+      friendly_name: "Minimumspris"
+      unit_of_measurement: "NOK/kWh"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'min_price') }}"
+      icon_template: mdi:currency-usd
+    tibber_estimert:
+      unit_of_measurement: 'kWh'
+      friendly_name: "Estimert forbruk"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'estimated_annual_consumption') }}"
+      icon_template: mdi:power-plug
 #      tibber_time:
 #        friendly_name: "Sist oppdatert"
 #        value_template: "{{ state_attr('sensor.real_time_consumption__wetlesens_vei_37_b, 'timestamp') }}"

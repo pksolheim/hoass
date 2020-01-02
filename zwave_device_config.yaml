@@ -1,3 +1,6 @@
 sensor.temperatur_stue:
   ignored: false
   polling_intensity: 0
+sensor.nodon_id_rf_crc_3_6_0x_soft_remote_battery_level:
+  ignored: false
+  polling_intensity: 0

@@ -34,3 +34,17 @@
     domain: switch
     entity_id: switch.fibaro_system_fgwpe_f_wall_plug_gen5_switch
     type: turn_on
+- id: '1577953454376'
+  alias: Varsle om skap
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.telldus_tzdw_100_magnet_switch_sensor_2
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: Skapet er åpnet
+      title: Skap åpnet
+    service: notify.pk

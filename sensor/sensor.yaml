@@ -19,64 +19,64 @@
   sensors:
     tibber_nett:
       friendly_name: "Nett Eier"
-      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'grid_company') }}"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b', 'grid_company') }}"
       icon_template: mdi:fuse
     tibber_max:
       friendly_name: "Max pris"
       unit_of_measurement: "NOK/kWh"
-      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'max_price') }}"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b', 'max_price') }}"
       icon_template: mdi:currency-usd
     tibber_avg:
       friendly_name: "Gjennomsnittspris"
       unit_of_measurement: "NOK/kWh"
-      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'avg_price') }}"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b', 'avg_price') }}"
       icon_template: mdi:currency-usd
     tibber_min:
       friendly_name: "Minimumspris"
       unit_of_measurement: "NOK/kWh"
-      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'min_price') }}"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b', 'min_price') }}"
       icon_template: mdi:currency-usd
     tibber_estimert:
       unit_of_measurement: 'kWh'
       friendly_name: "Estimert forbruk"
-      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b, 'estimated_annual_consumption') }}"
+      value_template: "{{ state_attr('sensor.electricity_price_wetlesens_vei_37_b', 'estimated_annual_consumption') }}"
       icon_template: mdi:power-plug
 #      tibber_time:
 #        friendly_name: "Sist oppdatert"
-#        value_template: "{{ state_attr('sensor.real_time_consumption__wetlesens_vei_37_b, 'timestamp') }}"
+#        value_template: "{{ state_attr('sensor.real_time_consumption__wetlesens_vei_37_b', 'timestamp') }}"
 #        icon_template: mdi:clock-outline
 #      tibber_minpower:
 #        friendly_name: "Laveste forbruk"
 #        unit_of_measurement: "W"
-#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b, 'minPower') }}"
+#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b', 'minPower') }}"
 #        icon_template: mdi:power-plug
 #      tibber_averagepower:
 #        friendly_name: "Gjennomsnitts forbruk"
 #        unit_of_measurement: "W"
-#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b, 'averagePower') }}"
+#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b', 'averagePower') }}"
 #        icon_template: mdi:power-plug
 #      tibber_maxpower:
 #        friendly_name: "Høyeste forbruk"
 #        unit_of_measurement: "W"
-#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b, 'maxPower') }}"
+#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b', 'maxPower') }}"
 #        icon_template: mdi:power-plug
 #      tibber_accumulatedconsumption:
 #        friendly_name: "Forbruk i dag"
 #        unit_of_measurement: 'kWh'
-#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b, 'accumulatedConsumption') }}"
+#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b', 'accumulatedConsumption') }}"
 #        icon_template: mdi:power-plug
 #      tibber_accumulatedcost:
 #        friendly_name: "Kostnad i dag"
 #        unit_of_measurement: 'Kr'
-#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b, 'accumulatedCost') }}"
+#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b', 'accumulatedCost') }}"
 #        icon_template: mdi:currency-usd
 #      tibber_volt:
 #        friendly_name: "Spenning"
 #        unit_of_measurement: 'V'
-#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b, 'voltagePhase1') }}"
+#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b', 'voltagePhase1') }}"
 #        icon_template: mdi:flash
 #      tibber_amp:
 #        friendly_name: "Strøm"
 #        unit_of_measurement: 'A'
-#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b, 'currentPhase1') }}"
+#        value_template: "{{ state_attr('sensor.real_time_consumption_wetlesens_vei_37_b', 'currentPhase1') }}"
 #        icon_template: mdi:current-ac

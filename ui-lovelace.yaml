@@ -37,7 +37,7 @@ views:
       'off': /local/images/garage_closed.svg
       'on': /local/images/garage_open.svg
     type: picture-entity
-  - entity: light.stue
+  - entity: light.stue_2
     id: ce21d66b8cdb426085b0063d97b0c98c
     type: entity-button
   - entity: light.gang
@@ -97,7 +97,7 @@ views:
 - background: 'radial-gradient(crimson, skyblue)'
   cards:
   - entities:
-    - light.stue
+    - light.stue_2
     - light.gang
     - light.pyntelampe
     - light.sofa
@@ -169,7 +169,7 @@ views:
   - type: horizontal-stack
     cards:
     - type: entity-button
-      entity: light.stue
+      entity: light.stue_2
       tap_action:
         action: toggle
   - type: horizontal-stack

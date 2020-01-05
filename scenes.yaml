@@ -1,7 +1,7 @@
 - id: my_unique_scene_id1
   name: Hovedetasje normal
   entities:
-    light.stue:
+    light.stue_2:
       state: on
       transition: 3
       brightness_pct: 100
@@ -17,7 +17,7 @@
 - id: my_unique_scene_id2
   name: Hovedetasje film
   entities:
-    light.stue:
+    light.stue_2:
       state: 'off'
       transition: 3
     light.gang:

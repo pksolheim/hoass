@@ -5,7 +5,7 @@
       state: on
       transition: 3
       brightness_pct: 100
-    light.gang:
+    light.gang_2:
       state: on
       transition: 3
       brightness_pct: 100
@@ -20,7 +20,7 @@
     light.stue_2:
       state: 'off'
       transition: 3
-    light.gang:
+    light.gang_2:
       state: on
       transition: 3
       brightness_pct: 5

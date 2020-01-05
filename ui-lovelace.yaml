@@ -40,7 +40,7 @@ views:
   - entity: light.stue_2
     id: ce21d66b8cdb426085b0063d97b0c98c
     type: entity-button
-  - entity: light.gang
+  - entity: light.gang_2
     id: 932ec73ca9c44367bca7d511667cad36
     type: entity-button
   - entity: light.gangoppe
@@ -98,7 +98,7 @@ views:
   cards:
   - entities:
     - light.stue_2
-    - light.gang
+    - light.gang_2
     - light.pyntelampe
     - light.sofa
     - light.gangoppe
@@ -187,7 +187,7 @@ views:
       tap_action:
         action: toggle
     - type: entity-button
-      entity: light.gang
+      entity: light.gang_2
       tap_action:
         action: toggle
   - type: horizontal-stack

@@ -27,7 +27,7 @@ nattmodus_hoved_pa:
       brightness: 12
   - service: light.turn_on
     data:
-      entity_id: light.gang
+      entity_id: light.gang_2
       brightness: 12
 
 nattmodus_hoved_av:
@@ -47,5 +47,5 @@ nattmodus_hoved_av:
       brightness: 255
   - service: light.turn_on
     data:
-      entity_id: light.gang
+      entity_id: light.gang_2
       brightness: 255

@@ -65,12 +65,12 @@
 #  sequence:
 #  - service: homeassistant.turn_on
 #    data:
-#      entity_id: light.gang
+#      entity_id: light.gang_2
 #  - delay:
 #      seconds: 1
 #  - service: homeassistant.turn_off
 #    data:
-#      entity_id: light.gang
+#      entity_id: light.gang_2
 #  - service: script.turn_on
 #    data:
 #      entity_id: script.light_loop
@@ -94,4 +94,4 @@
 #     data:
 #       entity_id: script.light_loop
 #  - service: light.turn_on
-#    entity_id: light.gang
+#    entity_id: light.gang_2

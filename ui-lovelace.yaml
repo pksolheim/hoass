@@ -43,7 +43,7 @@ views:
   - entity: light.gang_2
     id: 932ec73ca9c44367bca7d511667cad36
     type: entity-button
-  - entity: light.gangoppe
+  - entity: light.gangoppe_2
     id: 2a3b1b9b969246fc9a253e86ed18e271
     type: entity-button
   - entities:
@@ -100,8 +100,8 @@ views:
     - light.stue_2
     - light.gang_2
     - light.pyntelampe
-    - light.sofa
-    - light.gangoppe
+    - light.sofa_2
+    - light.gangoppe_2
     - light.nattlys_isabell
     - light.nattlys_aleksander
     id: 47a400f2d8844a0ea66610bb82809ac7
@@ -175,7 +175,7 @@ views:
   - type: horizontal-stack
     cards:
     - type: entity-button
-      entity: light.sofa
+      entity: light.sofa_2
       tap_action:
         action: toggle
     - type: entity-button
@@ -201,7 +201,7 @@ views:
       tap_action:
         action: toggle
     - type: entity-button
-      entity: light.gangoppe
+      entity: light.gangoppe_2
       tap_action:
         action: toggle
   badges: []

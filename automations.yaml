@@ -48,3 +48,130 @@
       message: Skapet er åpnet
       title: Skap åpnet
     service: notify.pk
+- id: '1578336737649'
+  alias: Skifte farge i kjelleren
+  description: ''
+  trigger:
+  - device_id: 96c2cfa301aa4bae8450ba1f8e0c30c6
+    domain: deconz
+    platform: device
+    subtype: left
+    type: remote_button_long_press
+  condition: []
+  action:
+  - alias: ''
+    data: {}
+    entity_id: input_select.pyntelampe_color
+    service: input_select.select_next
+  - data_template:
+      color_name: '{{ states.input_select.pyntelampe_color.state }}'
+      entity_id: light.light_23
+    service: light.turn_on
+- id: '1581111122144'
+  alias: Fjernkontroll lys isabell nattlys på
+  description: ''
+  trigger:
+  - event_data:
+      entity_id: zwave.nodon_id_rf_crc_3_6_0x_soft_remote
+      scene_id: 10
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - device_id: 1067078dc6844073ad8966902a7ce2a3
+    domain: light
+    entity_id: light.nattlys_isabell
+    type: turn_on
+- id: '1581112405699'
+  alias: Fjernkontroll lys isabell nattlys av
+  description: ''
+  trigger:
+  - event_data:
+      entity_id: zwave.nodon_id_rf_crc_3_6_0x_soft_remote
+      scene_id: 30
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - device_id: 1067078dc6844073ad8966902a7ce2a3
+    domain: light
+    entity_id: light.nattlys_isabell
+    type: turn_off
+- id: '1581112955512'
+  alias: Fjernkontroll lys isabell nattlys opp
+  description: ''
+  trigger:
+  - event_data:
+      entity_id: zwave.nodon_id_rf_crc_3_6_0x_soft_remote
+      scene_id: 12
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - data_template:
+      brightness: '{{ states.light.nattlys_isabell.attributes.brightness + 50 }}'
+    entity_id: light.nattlys_isabell
+    service: light.turn_on
+- id: '1581113175285'
+  alias: Fjernkontroll lys isabell nattlys ned
+  description: ''
+  trigger:
+  - event_data:
+      entity_id: zwave.nodon_id_rf_crc_3_6_0x_soft_remote
+      scene_id: 32
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - data_template:
+      brightness: '{{ states.light.nattlys_isabell.attributes.brightness - 50 }}'
+    entity_id: light.nattlys_isabell
+    service: light.turn_on
+- id: '1581113702651'
+  alias: Fjernkontroll lys isabell nattlys nullstill
+  description: ''
+  trigger:
+  - event_data:
+      entity_id: zwave.nodon_id_rf_crc_3_6_0x_soft_remote
+      scene_id: 13
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - data:
+      entity_id: light.nattlys_isabell
+      rgb_color:
+      - 204
+      - 0
+      - 102
+    service: light.turn_on
+  - data:
+      brightness: 1
+      entity_id:
+      - light.nattlys_isabell
+      transition: 10
+    service: light.turn_on
+- id: '1581114331457'
+  alias: Fjernkontroll lys isabell nattlys lesing
+  description: ''
+  trigger:
+  - event_data:
+      entity_id: zwave.nodon_id_rf_crc_3_6_0x_soft_remote
+      scene_id: 33
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+  - data:
+      brightness: 255
+      entity_id:
+      - light.nattlys_isabell
+      transition: 5
+    service: light.turn_on
+  - data:
+      entity_id: light.nattlys_isabell
+      rgb_color:
+      - 255
+      - 255
+      - 255
+    service: light.turn_on

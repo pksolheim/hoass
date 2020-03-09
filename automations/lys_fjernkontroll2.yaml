@@ -18,11 +18,9 @@
       event: 2002
   action:
   - service: light.turn_on
-    data_template:
+    data:
       entity_id: light.kjeller
-      brightness: >
-        {% set bri = states.light.kjeller.attributes.brightness | int %}
-        {{ [bri+30, 254] | min }}
+      brightness_step_pct: 5
 
 - alias: 'Lys kjeller dimme ned'
   trigger:
@@ -33,11 +31,9 @@
       event: 3002
   action:
   - service: light.turn_on
-    data_template:
+    data:
       entity_id: light.kjeller
-      brightness: >
-        {% set bri = states.light.kjeller.attributes.brightness | int %}
-        {{ [bri-100, 0] | max }}
+      brightness_step_pct: -5
 
 - alias: 'Lys kjeller varme opp'
   trigger:

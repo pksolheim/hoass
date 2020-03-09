@@ -33,17 +33,13 @@
       event: 2002
   action:
   - service: light.turn_on
-    data_template:
+    data:
       entity_id: light.stue
-      brightness: >
-        {% set bri = states.light.stue.attributes.brightness | int %}
-        {{ [bri+30, 249] | min }}
+      brightness_step_pct: 5
   - service: light.turn_on
-    data_template:
+    data:
       entity_id: light.gang
-      brightness: >
-        {% set bri = states.light.gang.attributes.brightness | int %}
-        {{ [bri+30, 249] | min }}
+      brightness_step_pct: 5
 
 - alias: 'Lys stue dimme ned'
   trigger:
@@ -54,17 +50,13 @@
       event: 3002
   action:
   - service: light.turn_on
-    data_template:
+    data:
       entity_id: light.stue
-      brightness: >
-        {% set bri = states.light.stue.attributes.brightness | int %}
-        {{ [bri-30, 0] | max }}
+      brightness_step_pct: -5
   - service: light.turn_on
-    data_template:
+    data:
       entity_id: light.gang
-      brightness: >
-        {% set bri = states.light.gang.attributes.brightness | int %}
-        {{ [bri-30, 0] | max }}
+      brightness_step_pct: -5
 
 - alias: 'Lys stue bytte farge'
   trigger:

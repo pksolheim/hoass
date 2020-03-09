@@ -119,24 +119,14 @@ input_boolean: !include_dir_merge_named input/input_booleans/
 input_select: !include_dir_merge_named input/input_selects/
 input_datetime: !include_dir_merge_named input/input_datetime/
 
-google_assistant:
-  project_id: !secret google_project_id
-  api_key: !secret google_api_key
-  exposed_domains:
-  - light
-  - sensor
-  - climate
-  - script
-
-history_graph:
-  temperature_outside:
-    name: 'Temperatur siste 24 timer'
-    hours_to_show: 24
-    refresh: 120
-    entities:
-    - sensor.temperatur_ute
-    - sensor.temperatur_gang
-    - sensor.temperatur_kjeller
+#google_assistant:
+#  project_id: !secret google_project_id
+#  api_key: !secret google_api_key
+#  exposed_domains:
+#  - light
+#  - sensor
+#  - climate
+#  - script
 
 #Logger level with debug
 logger:

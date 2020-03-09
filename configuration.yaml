@@ -40,6 +40,7 @@ notify:
 - platform: pushbullet
   name: pk
   api_key: !secret pushbullet_api_key
+
 - platform: webostv
   name: tv
   host: 192.168.1.107

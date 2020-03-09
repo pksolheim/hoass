@@ -7,7 +7,7 @@
     condition: and
     conditions:
     - condition: state
-      entity_id: light.stue_2
+      entity_id: light.stue
       state: 'off'
     - condition: state
       entity_id: input_boolean.filmmodus_hoved
@@ -15,7 +15,7 @@
   action:
   - service: light.turn_on
     data_template:
-      entity_id: light.stue_2
+      entity_id: light.stue
       brightness: >
         {% if states.input_boolean.nattmodus_hoved.state == 'off' %}
           255
@@ -24,7 +24,7 @@
         {% endif %}
   - service: light.turn_on
     data_template:
-      entity_id: light.gang_2
+      entity_id: light.gang
       brightness: >
         {% if states.input_boolean.nattmodus_hoved.state == 'off' %}
           255
@@ -40,7 +40,7 @@
   action:
   - service: light.turn_on
     data_template:
-      entity_id: light.gang_2
+      entity_id: light.gang
       brightness: >
         {% if states.input_boolean.nattmodus_hoved.state == 'off' %}
           255
@@ -55,7 +55,7 @@
   action:
   - service: light.turn_on
     data_template:
-      entity_id: light.gang_2
+      entity_id: light.gang
       brightness: 255
 
 - alias: Hovedetasje nattmodus av
@@ -94,9 +94,9 @@
       state: 'on'
   action:
   - service: light.turn_off
-    entity_id: light.stue_2
+    entity_id: light.stue
   - service: light.turn_off
-    entity_id: light.gang_2
+    entity_id: light.gang
   - service: input_boolean.turn_off
     entity_id: input_boolean.nattmodus_hoved_dimmet
 

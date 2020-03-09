@@ -4,7 +4,7 @@
     event: sunset
     offset: "-00:20:00"
   action:
-    entity_id: light.ute_2
+    entity_id: light.ute
     service: light.turn_on
 
 - alias: Utelys av, soloppgang
@@ -13,5 +13,5 @@
     event: sunrise
     offset: "00:30:00"
   action:
-    entity_id: light.ute_2
+    entity_id: light.ute
     service: light.turn_off

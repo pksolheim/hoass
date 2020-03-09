@@ -1,5 +1,4 @@
 - platform: generic_thermostat
-  id: 'asfasf897412123'
   name: Stue_varme
   heater: group.stue_varme
   target_sensor: sensor.temperatur_gang
@@ -16,7 +15,6 @@
   away_temp: 17
 
 - platform: generic_thermostat
-  id: 'uhaslkf871243'
   name: Kjeller_varme
   heater: switch.varme1_kjeller
   target_sensor: sensor.temperatur_kjeller
@@ -33,7 +31,6 @@
   away_temp: 15
 
 - platform: generic_thermostat
-  id: 'asfywer8762141'
   name: Temperatur ute
   heater: input_boolean.fake_heater
   target_sensor: sensor.temperatur_ute

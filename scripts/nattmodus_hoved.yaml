@@ -23,11 +23,11 @@ nattmodus_hoved_pa:
     entity_id: switch.ekstra_bryter_2
   - service: light.turn_on
     data:
-      entity_id: light.stue_2
+      entity_id: light.stue
       brightness: 12
   - service: light.turn_on
     data:
-      entity_id: light.gang_2
+      entity_id: light.gang
       brightness: 12
 
 nattmodus_hoved_av:
@@ -43,9 +43,9 @@ nattmodus_hoved_av:
     entity_id: switch.ekstra_bryter_2
   - service: light.turn_on
     data:
-      entity_id: light.stue_2
+      entity_id: light.stue
       brightness: 255
   - service: light.turn_on
     data:
-      entity_id: light.gang_2
+      entity_id: light.gang
       brightness: 255

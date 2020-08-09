@@ -84,7 +84,7 @@
   trigger:
     platform: template
     value_template: "{{ states('sensor.time') == (states.input_datetime.nattmodus_oppe_av.attributes.timestamp | int | timestamp_custom('%H:%M', False)) }}"
-condition:
+  condition:
     condition: and
     conditions:
     - condition: state

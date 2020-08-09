@@ -1,4 +1,4 @@
-- alias: nattlys av hverdag hverdag
+- alias: nattlys av hverdag
   trigger:
   - platform: time
     at: '06:15:00'
@@ -82,9 +82,9 @@
 
 - alias:  Nattmodus oppe av
   trigger:
-  - platform: time
-    at: '08:00:00'
-  condition:
+    platform: template
+    value_template: "{{ states('sensor.time') == (states.input_datetime.nattmodus_oppe_av.attributes.timestamp | int | timestamp_custom('%H:%M', False)) }}"
+condition:
     condition: and
     conditions:
     - condition: state

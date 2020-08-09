@@ -3,3 +3,9 @@ nattlys_vekketid:
   has_date: false
   has_time: true
   initial: '06:15:00'
+
+nattmodus_oppe_av:
+  name: Nattmodus oppe av
+  has_date: false
+  has_time: true
+  initial: '08:00:00'

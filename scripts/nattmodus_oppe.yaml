@@ -16,10 +16,10 @@ nattmodus_oppe_pa:
   - service: input_boolean.turn_on
     entity_id: input_boolean.nattmodus_oppe
   - service: light.turn_off
-    entity_id: light.gangoppe1
+    entity_id: light.gangoppe4
   - service: light.turn_on
     data:
-      entity_id: light.gangoppe2
+      entity_id: light.gangoppe3
       brightness: 12
   - service: light.turn_on
     data:
@@ -46,11 +46,11 @@ nattmodus_oppe_av:
     entity_id: input_boolean.nattmodus_oppe
   - service: light.turn_on
     data:
-      entity_id: light.gangoppe1
+      entity_id: light.gangoppe4
       brightness: 255
   - service: light.turn_on
     data:
-      entity_id: light.gangoppe2
+      entity_id: light.gangoppe3
       brightness: 255
   - service: light.turn_off
     entity_id: light.nattlys_isabell
